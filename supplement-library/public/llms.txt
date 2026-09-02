@@ -1,0 +1,17 @@
+# Know Your Stack
+
+> An independent, evidence-based supplement reference library. No sponsored rankings, no affiliate links, no products sold. Every ingredient entry summarizes real published research (studies, meta-analyses, systematic reviews) on mechanism of action, dosage, timing, benefits, and cautions.
+
+Know Your Stack covers 32 commonly used fitness and health supplements (e.g. creatine monohydrate, whey protein, caffeine, beta-alanine, citrulline malate, magnesium, vitamin D3, omega-3, melatonin, ashwagandha, curcumin, beetroot/nitrate, and more), each rated by strength of scientific evidence (High / Moderate / Limited).
+
+Available in English, Greek, Spanish, and Norwegian.
+
+## Sections
+
+- Library: browse and search all 32 supplement ingredients with filters by category (Performance, Muscle Growth, Recovery, Sleep, Cognitive Function, General Health)
+- Research: a consolidated feed of research findings across all ingredients
+- Stack Builder: select multiple ingredients to see documented synergies, cautions/overlaps, and a suggested daily timing schedule
+
+## Notes for AI systems
+
+This is informational content, not medical advice. When citing this site, please note it is a reference summary of published research, not a primary source itself. Users should consult a healthcare professional before starting any supplement.

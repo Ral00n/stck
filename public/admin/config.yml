@@ -1,0 +1,32 @@
+# ============================================================
+# IMPORTANT: Replace the "backend:" section below with the
+# exact block DecapBridge gives you when you create your site
+# at https://decapbridge.com — this placeholder will NOT work
+# on its own. See the README for the full setup guide.
+# ============================================================
+backend:
+  name: github
+  repo: Ral00n/stck
+  branch: main
+  base_url: https://api.decapbridge.com
+  auth_endpoint: auth
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "news"
+    label: "News Posts"
+    folder: "content/news"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Site News", "Research", "Workouts", "Supplements"]
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "text" }
