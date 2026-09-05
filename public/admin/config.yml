@@ -1,15 +1,31 @@
-# ============================================================
-# IMPORTANT: Replace the "backend:" section below with the
-# exact block DecapBridge gives you when you create your site
-# at https://decapbridge.com — this placeholder will NOT work
-# on its own. See the README for the full setup guide.
-# ============================================================
+# Use DecapBridge PKCE auth (required)
 backend:
-  name: github
+  name: git-gateway
   repo: Ral00n/stck
   branch: main
-  base_url: https://api.decapbridge.com
-  auth_endpoint: auth
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/aabdfc0b-8bae-4e85-bdf5-39bdc1336c78/pkce
+  auth_token_endpoint: /sites/aabdfc0b-8bae-4e85-bdf5-39bdc1336c78/token
+  gateway_url: https://gateway.decapbridge.com
+  # See who did what (optional)
+  commit_messages:
+    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
+# Enable PKCE fields (optional, recommended)
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+# Better Decap + Bridge logo (optional)
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+# Add site links in Decap CMS (optional)
+site_url: https://lively-queijadas-4088f2.netlify.app
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
