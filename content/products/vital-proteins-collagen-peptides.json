@@ -1,0 +1,16 @@
+{
+  "brand": "Vital Proteins",
+  "name": "Collagen Peptides",
+  "category": "collagen",
+  "image": "",
+  "specs": [
+    { "label": "Serving Size", "value": "2 scoops (~20 g)" },
+    { "label": "Collagen Peptides", "value": "20 g" },
+    { "label": "Protein", "value": "18 g" },
+    { "label": "Calories", "value": "70" },
+    { "label": "Source", "value": "Bovine hide, grass-fed/pasture-raised" }
+  ],
+  "certifications": "NSF Certified for Sport (select SKUs); Whole30 Approved",
+  "pricePerServing": "≈$1.55–2.14",
+  "sourceUrl": "https://www.vitalproteins.com/products/vp-collagen-peptides"
+}

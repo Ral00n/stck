@@ -1,8 +1,8 @@
-# Know Your Stack
+# STCK
 
 > An independent, evidence-based supplement reference library. No sponsored rankings, no affiliate links, no products sold. Every ingredient entry summarizes real published research (studies, meta-analyses, systematic reviews) on mechanism of action, dosage, timing, benefits, and cautions.
 
-Know Your Stack covers 32 commonly used fitness and health supplements (e.g. creatine monohydrate, whey protein, caffeine, beta-alanine, citrulline malate, magnesium, vitamin D3, omega-3, melatonin, ashwagandha, curcumin, beetroot/nitrate, and more), each rated by strength of scientific evidence (High / Moderate / Limited).
+STCK (stck.info) covers 32 commonly used fitness and health supplements (e.g. creatine monohydrate, whey protein, caffeine, beta-alanine, citrulline malate, magnesium, vitamin D3, omega-3, melatonin, ashwagandha, curcumin, beetroot/nitrate, and more), each rated by strength of scientific evidence (High / Moderate / Limited).
 
 Available in English, Greek, Spanish, and Norwegian.
 

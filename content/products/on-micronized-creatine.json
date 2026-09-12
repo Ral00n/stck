@@ -1,0 +1,16 @@
+{
+  "brand": "Optimum Nutrition",
+  "name": "Micronized Creatine Monohydrate",
+  "category": "creatine",
+  "image": "",
+  "specs": [
+    { "label": "Serving Size", "value": "5 g (1 rounded teaspoon)" },
+    { "label": "Creatine Monohydrate", "value": "5 g" },
+    { "label": "Calories", "value": "0" },
+    { "label": "Flavor", "value": "Unflavored" },
+    { "label": "Form", "value": "Micronized creatine monohydrate" }
+  ],
+  "certifications": "Informed Choice Certified (banned substance tested)",
+  "pricePerServing": "≈$0.34–0.66",
+  "sourceUrl": "https://www.optimumnutrition.com/en-us/products/creatine-monohydrate-micronized-powder"
+}

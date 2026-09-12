@@ -1,0 +1,14 @@
+{
+  "brand": "NOW Foods",
+  "name": "Magnesium Glycinate",
+  "category": "magnesium",
+  "image": "",
+  "specs": [
+    { "label": "Serving Size", "value": "2 tablets" },
+    { "label": "Elemental Magnesium", "value": "200 mg" },
+    { "label": "Form", "value": "Magnesium Bisglycinate (Albion™ chelate)" }
+  ],
+  "certifications": "Non-GMO; Vegan/Vegetarian",
+  "pricePerServing": "≈$0.20–0.24",
+  "sourceUrl": "https://www.nowfoods.com/products/supplements/magnesium-glycinate-tablets"
+}

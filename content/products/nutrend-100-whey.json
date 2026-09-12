@@ -1,0 +1,19 @@
+{
+  "brand": "Nutrend",
+  "name": "100% Whey Protein",
+  "category": "protein",
+  "image": "",
+  "specs": [
+    { "label": "Serving Size", "value": "30 g" },
+    { "label": "Protein", "value": "22.8 g" },
+    { "label": "Calories", "value": "116" },
+    { "label": "Carbs", "value": "2.6 g" },
+    { "label": "Fat", "value": "1.5 g" },
+    { "label": "BCAAs", "value": "5 g" },
+    { "label": "Protein Source", "value": "Whey blend — 78% concentrate, 15.5% isolate (CFM technology)" },
+    { "label": "Sweeteners", "value": "Not disclosed as artificial; stabilized with acacia/xanthan gum" }
+  ],
+  "certifications": "Grass-Fed certified; ISO 9001/22000 (company-level)",
+  "pricePerServing": "≈€1.00–1.50",
+  "sourceUrl": "https://www.nutrend.eu/product/100-whey-protein-333/2250-g-vanilla"
+}

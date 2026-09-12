@@ -37,14 +37,14 @@ function writeRoute(routePath, appHtml, title, description) {
 writeRoute(
   "/",
   render("/"),
-  "Know Your Stack — Evidence-Based Supplement Library",
+  "STCK — Evidence-Based Supplement Library",
   "An independent, evidence-based reference for 32 fitness and health supplements — mechanism, dosage, timing, benefits, cautions, and real research findings. No sponsored rankings, no affiliate links."
 );
 
 // One static page per ingredient
 for (const item of INGREDIENTS) {
   const en = item.i18n.en;
-  const title = `${en.name} — Know Your Stack`;
+  const title = `${en.name} — STCK`;
   const description = `${en.tagline} Evidence level: ${item.evidence}. Mechanism, dosage, timing, and real research findings for ${en.name}.`;
   writeRoute(`/ingredient/${item.id}`, render(`/ingredient/${item.id}`), title, description);
 }

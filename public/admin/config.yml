@@ -46,3 +46,35 @@ collections:
         options: ["Site News", "Research", "Workouts", "Supplements"]
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Body", name: "body", widget: "text" }
+  - name: "products"
+    label: "Products (Compare Tab)"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Brand", name: "brand", widget: "string" }
+      - { label: "Product Name", name: "name", widget: "string" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Whey Protein", value: "protein" }
+          - { label: "Creatine", value: "creatine" }
+          - { label: "Omega-3 / Fish Oil", value: "omega3" }
+          - { label: "Vitamin D3", value: "vitaminD" }
+          - { label: "Magnesium", value: "magnesium" }
+          - { label: "Ashwagandha", value: "ashwagandha" }
+          - { label: "Melatonin", value: "melatonin" }
+          - { label: "Collagen", value: "collagen" }
+          - { label: "Multivitamin", value: "multivitamin" }
+      - { label: "Product Photo", name: "image", widget: "image", required: false }
+      - label: "Specs (rows shown in the comparison table)"
+        name: "specs"
+        widget: "list"
+        fields:
+          - { label: "Row Label", name: "label", widget: "string" }
+          - { label: "Value", name: "value", widget: "string" }
+      - { label: "Certifications", name: "certifications", widget: "string", required: false }
+      - { label: "Price per Serving", name: "pricePerServing", widget: "string" }
+      - { label: "Source URL (where you found the info)", name: "sourceUrl", widget: "string", required: false }

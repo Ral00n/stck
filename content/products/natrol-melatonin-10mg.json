@@ -1,0 +1,14 @@
+{
+  "brand": "Natrol",
+  "name": "Melatonin 10mg Fast Dissolve",
+  "category": "melatonin",
+  "image": "",
+  "specs": [
+    { "label": "Serving Size", "value": "1 tablet" },
+    { "label": "Melatonin", "value": "10 mg" },
+    { "label": "Form", "value": "Fast-dissolve tablet" }
+  ],
+  "certifications": "Drug-free, non-habit forming",
+  "pricePerServing": "≈$0.11–0.21",
+  "sourceUrl": "https://www.amazon.com/Natrol-Melatonin-Strawberry-Flavored-Supplement-Fast-Dissolve/dp/B01E14X7SM"
+}

@@ -1,0 +1,16 @@
+{
+  "brand": "Centrum",
+  "name": "Adult Multivitamin",
+  "category": "multivitamin",
+  "image": "",
+  "specs": [
+    { "label": "Serving Size", "value": "1 tablet" },
+    { "label": "Micronutrients Covered", "value": "23 vitamins & minerals" },
+    { "label": "Vitamin D3", "value": "25 mcg (1,000 IU)" },
+    { "label": "Vitamin B12", "value": "6 mcg (250% DV)" },
+    { "label": "Iron", "value": "18 mg (100% DV)" }
+  ],
+  "certifications": "Non-GMO; Gluten-Free",
+  "pricePerServing": "≈$0.06–0.10",
+  "sourceUrl": "https://www.vitacost.com/centrum-adults-multivitamin-multimineral"
+}

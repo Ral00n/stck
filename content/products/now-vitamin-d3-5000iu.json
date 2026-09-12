@@ -1,0 +1,14 @@
+{
+  "brand": "NOW Foods",
+  "name": "Vitamin D3 5000 IU",
+  "category": "vitaminD",
+  "image": "",
+  "specs": [
+    { "label": "Serving Size", "value": "1 soft gel" },
+    { "label": "Vitamin D3", "value": "125 mcg (5,000 IU)" },
+    { "label": "Form", "value": "Cholecalciferol (from lanolin), in olive oil" }
+  ],
+  "certifications": "Non-GMO; GMP Quality Assured",
+  "pricePerServing": "≈$0.08–0.15",
+  "sourceUrl": "https://www.nowfoods.com/products/supplements/vitamin-d-3-5000-iu-softgels"
+}

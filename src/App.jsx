@@ -9,6 +9,7 @@ const NEWS = Object.entries(newsModules)
 import {
   Search, X, Moon, Zap, Dumbbell, Brain, HeartPulse, AlertTriangle,
   Clock, Beaker, Shield, Timer, TrendingUp, SlidersHorizontal, Globe, Download, Crown, Check, Sun, Mail,
+  Newspaper, Store, Layers, ArrowRight,
 } from "lucide-react";
 
 const LANGUAGES = [
@@ -42,6 +43,16 @@ const UI = {
     ovr: "Score",
     detailNote: "Detailed info below is shown in English for accuracy.",
     research: "In The Research",
+    tabWelcome: "Welcome",
+    welcomeHeroTitle: "Welcome to",
+    welcomeIntro: "STCK is a free, independent supplement reference — no sponsored rankings, no affiliate links, nothing for sale here except the Premium coaching option. Here's a quick guide to what you'll find and how to use it.",
+    welcomeGuideLibraryDesc: "Browse 60+ supplement ingredients, each backed by real studies — what it does, how much to take, when to take it, and what to watch out for.",
+    welcomeGuideResearchDesc: "A live feed of the latest research findings across every ingredient in the Library, in one place.",
+    welcomeGuideStackDesc: "Pick what you're already taking and instantly see synergies, overlaps, and cautions between them.",
+    welcomeGuideCompareDesc: "Compare real branded products side by side — like a specific whey protein vs. another — with sourced specs and pricing.",
+    welcomeGuideNewsDesc: "Site updates and research roundups, posted regularly.",
+    welcomeGuidePremiumDesc: "Want it personalized? Get 1-on-1 training and supplement coaching directly from a real person.",
+    welcomeCta: "Start Exploring the Library",
     tabLibrary: "Library",
     tabResearch: "Research",
     tabStack: "Stack Builder",
@@ -58,6 +69,28 @@ const UI = {
     slotEvening: "Evening",
     slotAnytime: "Anytime",
     clearStack: "Clear",
+    tabCompare: "Compare",
+    compareIntro: "Real products, side by side — so you can see which one actually fits what you're looking for.",
+    compareCategoryLabel: "Category:",
+    compareSelectLabel: "Products to compare:",
+    compareEmptySub: "Select at least one product above.",
+    compareColBrand: "Brand",
+    compareColProduct: "Product",
+    compareColServing: "Serving Size",
+    compareColProtein: "Protein",
+    compareColCalories: "Calories",
+    compareColCarbs: "Carbs",
+    compareColFat: "Fat",
+    compareColBcaa: "BCAAs",
+    compareColSource: "Protein Source",
+    compareColSweeteners: "Sweeteners",
+    compareColGrassFed: "Grass-Fed",
+    compareColCert: "Certifications",
+    compareColPrice: "Price / Serving",
+    compareYes: "Yes",
+    compareNo: "No",
+    compareDataNote: "Figures are sourced from brand and retailer listings and may vary by flavor, batch, or region. Always check the label on the product you actually buy.",
+    compareSourceLink: "View source",
     legalLink: "Terms & Disclaimer",
     tabOverview: "Overview",
     tabResearchDetail: "Research",
@@ -91,9 +124,9 @@ const UI = {
       "Intellectual Property — All original content on this site is our own work. Ingredient names and general scientific facts are not owned by us and may appear on other educational resources.",
       "Changes — We may update or remove content at any time without notice.",
     ],
-    aboutTitle: "About Know Your Stack",
-    aboutText: "We built Know Your Stack to make supplement research easier to actually read. Every entry pulls from real studies and meta-analyses — no sponsored rankings, no affiliate links, no products to sell. Just a straight look at what the evidence says, so you can decide what's worth your money and what isn't.",
-    copyright: "© 2026 Know Your Stack. All rights reserved.",
+    aboutTitle: "About STCK",
+    aboutText: "We built STCK to make supplement research easier to actually read. Every entry pulls from real studies and meta-analyses — no sponsored rankings, no affiliate links, no products to sell. Just a straight look at what the evidence says, so you can decide what's worth your money and what isn't.",
+    copyright: "© 2026 STCK. All rights reserved.",
   },
   el: {
     searchPlaceholder: "Αναζήτηση συστατικού ή στόχου",
@@ -118,6 +151,16 @@ const UI = {
     ovr: "Βαθμολογία",
     detailNote: "Οι αναλυτικές πληροφορίες παρακάτω εμφανίζονται στα Αγγλικά για ακρίβεια.",
     research: "Στην Έρευνα",
+    tabWelcome: "Καλωσόρισμα",
+    welcomeHeroTitle: "Καλώς ήρθες στο",
+    welcomeIntro: "Το STCK είναι μια δωρεάν, ανεξάρτητη βιβλιοθήκη συμπληρωμάτων — χωρίς χορηγούμενες κατατάξεις, χωρίς affiliate links, τίποτα προς πώληση εκτός από την επιλογή Premium coaching. Ένας σύντομος οδηγός για το τι θα βρεις και πώς να το χρησιμοποιήσεις.",
+    welcomeGuideLibraryDesc: "Εξερεύνησε 60+ συστατικά συμπληρωμάτων, το καθένα τεκμηριωμένο με πραγματικές μελέτες — τι κάνει, πόσο να πάρεις, πότε, και τι να προσέξεις.",
+    welcomeGuideResearchDesc: "Ζωντανή ροή με τα τελευταία ερευνητικά ευρήματα από όλα τα συστατικά της Βιβλιοθήκης, σε ένα μέρος.",
+    welcomeGuideStackDesc: "Επίλεξε τι ήδη παίρνεις και δες άμεσα συνέργειες, επικαλύψεις και προσοχές μεταξύ τους.",
+    welcomeGuideCompareDesc: "Σύγκρινε πραγματικά εμπορικά προϊόντα δίπλα-δίπλα — π.χ. μια συγκεκριμένη πρωτεΐνη whey με μια άλλη — με τεκμηριωμένα specs και τιμές.",
+    welcomeGuideNewsDesc: "Ενημερώσεις του site και συνόψεις έρευνας, τακτικά.",
+    welcomeGuidePremiumDesc: "Θες εξατομίκευση; Πάρε 1-προς-1 προπόνηση και συμβουλευτική συμπληρωμάτων απευθείας από πραγματικό άνθρωπο.",
+    welcomeCta: "Ξεκίνα την Εξερεύνηση της Βιβλιοθήκης",
     tabLibrary: "Βιβλιοθήκη",
     tabResearch: "Έρευνα",
     tabStack: "Χτίσε το Stack",
@@ -134,6 +177,28 @@ const UI = {
     slotEvening: "Βράδυ",
     slotAnytime: "Οποιαδήποτε Ώρα",
     clearStack: "Καθαρισμός",
+    tabCompare: "Σύγκριση",
+    compareIntro: "Πραγματικά προϊόντα, δίπλα-δίπλα — για να δεις ποιο πραγματικά ταιριάζει σε αυτό που ψάχνεις.",
+    compareCategoryLabel: "Κατηγορία:",
+    compareSelectLabel: "Προϊόντα προς σύγκριση:",
+    compareEmptySub: "Επίλεξε τουλάχιστον ένα προϊόν παραπάνω.",
+    compareColBrand: "Μάρκα",
+    compareColProduct: "Προϊόν",
+    compareColServing: "Μέγεθος Μερίδας",
+    compareColProtein: "Πρωτεΐνη",
+    compareColCalories: "Θερμίδες",
+    compareColCarbs: "Υδατάνθρακες",
+    compareColFat: "Λιπαρά",
+    compareColBcaa: "BCAA",
+    compareColSource: "Πηγή Πρωτεΐνης",
+    compareColSweeteners: "Γλυκαντικά",
+    compareColGrassFed: "Grass-Fed",
+    compareColCert: "Πιστοποιήσεις",
+    compareColPrice: "Τιμή / Μερίδα",
+    compareYes: "Ναι",
+    compareNo: "Όχι",
+    compareDataNote: "Τα στοιχεία προέρχονται από τη μάρκα και καταστήματα λιανικής και μπορεί να διαφέρουν ανά γεύση, παρτίδα ή αγορά. Πάντα έλεγξε την ετικέτα του προϊόντος που αγοράζεις.",
+    compareSourceLink: "Δες την πηγή",
     legalLink: "Όροι & Αποποίηση Ευθύνης",
     tabOverview: "Επισκόπηση",
     tabResearchDetail: "Έρευνα",
@@ -167,9 +232,9 @@ const UI = {
       "Πνευματική Ιδιοκτησία — Όλο το πρωτότυπο περιεχόμενο σε αυτό το site είναι δική μας δουλειά. Τα ονόματα συστατικών και γενικά επιστημονικά γεγονότα δεν ανήκουν σε εμάς και μπορεί να εμφανίζονται και σε άλλες εκπαιδευτικές πηγές.",
       "Αλλαγές — Μπορούμε να ενημερώσουμε ή να αφαιρέσουμε περιεχόμενο ανά πάσα στιγμή χωρίς προειδοποίηση.",
     ],
-    aboutTitle: "Σχετικά με το Know Your Stack",
-    aboutText: "Φτιάξαμε το Know Your Stack για να κάνουμε την έρευνα συμπληρωμάτων πιο εύκολα κατανοητή. Κάθε καταχώριση βασίζεται σε πραγματικές μελέτες και μετα-αναλύσεις — χωρίς χορηγούμενες κατατάξεις, χωρίς affiliate links, χωρίς προϊόντα προς πώληση. Μόνο μια ευθεία ματιά στο τι λένε τα στοιχεία, ώστε να αποφασίσεις μόνος σου τι αξίζει τα χρήματά σου.",
-    copyright: "© 2026 Know Your Stack. Με επιφύλαξη παντός δικαιώματος.",
+    aboutTitle: "Σχετικά με το STCK",
+    aboutText: "Φτιάξαμε το STCK για να κάνουμε την έρευνα συμπληρωμάτων πιο εύκολα κατανοητή. Κάθε καταχώριση βασίζεται σε πραγματικές μελέτες και μετα-αναλύσεις — χωρίς χορηγούμενες κατατάξεις, χωρίς affiliate links, χωρίς προϊόντα προς πώληση. Μόνο μια ευθεία ματιά στο τι λένε τα στοιχεία, ώστε να αποφασίσεις μόνος σου τι αξίζει τα χρήματά σου.",
+    copyright: "© 2026 STCK. Με επιφύλαξη παντός δικαιώματος.",
   },
   es: {
     searchPlaceholder: "Buscar ingrediente u objetivo",
@@ -194,6 +259,16 @@ const UI = {
     ovr: "Puntaje",
     detailNote: "La información detallada se muestra en inglés por precisión.",
     research: "En la Investigación",
+    tabWelcome: "Bienvenida",
+    welcomeHeroTitle: "Bienvenido a",
+    welcomeIntro: "STCK es una biblioteca de suplementos gratuita e independiente — sin rankings patrocinados, sin enlaces de afiliados, nada a la venta excepto la opción de coaching Premium. Aquí tienes una guía rápida de lo que encontrarás y cómo usarlo.",
+    welcomeGuideLibraryDesc: "Explora más de 60 ingredientes de suplementos, cada uno respaldado por estudios reales — qué hace, cuánto tomar, cuándo tomarlo y qué vigilar.",
+    welcomeGuideResearchDesc: "Un feed en vivo con los últimos hallazgos de investigación de todos los ingredientes de la Biblioteca, en un solo lugar.",
+    welcomeGuideStackDesc: "Elige lo que ya tomas y ve al instante sinergias, solapamientos y precauciones entre ellos.",
+    welcomeGuideCompareDesc: "Compara productos comerciales reales uno junto a otro — como una proteína whey específica frente a otra — con especificaciones y precios verificados.",
+    welcomeGuideNewsDesc: "Actualizaciones del sitio y resúmenes de investigación, publicados regularmente.",
+    welcomeGuidePremiumDesc: "¿Quieres algo personalizado? Obtén entrenamiento y coaching de suplementos 1 a 1 directamente de una persona real.",
+    welcomeCta: "Empezar a Explorar la Biblioteca",
     tabLibrary: "Biblioteca",
     tabResearch: "Investigación",
     tabStack: "Crear Stack",
@@ -210,6 +285,28 @@ const UI = {
     slotEvening: "Noche",
     slotAnytime: "Cualquier Momento",
     clearStack: "Borrar",
+    tabCompare: "Comparar",
+    compareIntro: "Productos reales, uno junto a otro — para que veas cuál se ajusta realmente a lo que buscas.",
+    compareCategoryLabel: "Categoría:",
+    compareSelectLabel: "Productos a comparar:",
+    compareEmptySub: "Selecciona al menos un producto arriba.",
+    compareColBrand: "Marca",
+    compareColProduct: "Producto",
+    compareColServing: "Tamaño de la Porción",
+    compareColProtein: "Proteína",
+    compareColCalories: "Calorías",
+    compareColCarbs: "Carbohidratos",
+    compareColFat: "Grasa",
+    compareColBcaa: "BCAA",
+    compareColSource: "Fuente de Proteína",
+    compareColSweeteners: "Edulcorantes",
+    compareColGrassFed: "Grass-Fed",
+    compareColCert: "Certificaciones",
+    compareColPrice: "Precio / Porción",
+    compareYes: "Sí",
+    compareNo: "No",
+    compareDataNote: "Los datos provienen de la marca y minoristas y pueden variar según sabor, lote o región. Revisa siempre la etiqueta del producto que compres.",
+    compareSourceLink: "Ver fuente",
     legalLink: "Términos y Aviso Legal",
     tabOverview: "Resumen",
     tabResearchDetail: "Investigación",
@@ -243,9 +340,9 @@ const UI = {
       "Propiedad Intelectual — Todo el contenido original de este sitio es trabajo propio. Los nombres de ingredientes y hechos científicos generales no nos pertenecen y pueden aparecer en otros recursos educativos.",
       "Cambios — Podemos actualizar o eliminar contenido en cualquier momento sin previo aviso.",
     ],
-    aboutTitle: "Sobre Know Your Stack",
-    aboutText: "Creamos Know Your Stack para hacer que la investigación de suplementos sea más fácil de entender. Cada entrada se basa en estudios reales y metaanálisis — sin rankings patrocinados, sin enlaces de afiliados, sin productos que vender. Solo una mirada directa a lo que dice la evidencia, para que decidas tú qué vale la pena.",
-    copyright: "© 2026 Know Your Stack. Todos los derechos reservados.",
+    aboutTitle: "Sobre STCK",
+    aboutText: "Creamos STCK para hacer que la investigación de suplementos sea más fácil de entender. Cada entrada se basa en estudios reales y metaanálisis — sin rankings patrocinados, sin enlaces de afiliados, sin productos que vender. Solo una mirada directa a lo que dice la evidencia, para que decidas tú qué vale la pena.",
+    copyright: "© 2026 STCK. Todos los derechos reservados.",
   },
   no: {
     searchPlaceholder: "Søk etter ingrediens eller mål",
@@ -270,6 +367,16 @@ const UI = {
     ovr: "Score",
     detailNote: "Detaljert informasjon vises på engelsk for nøyaktighet.",
     research: "I Forskningen",
+    tabWelcome: "Velkommen",
+    welcomeHeroTitle: "Velkommen til",
+    welcomeIntro: "STCK er et gratis, uavhengig kosttilskudd-oppslagsverk — ingen sponsede rangeringer, ingen affiliate-lenker, ingenting til salgs bortsett fra Premium-coaching. Her er en rask guide til hva du finner og hvordan du bruker det.",
+    welcomeGuideLibraryDesc: "Utforsk 60+ kosttilskuddsingredienser, hver underbygget av ekte studier — hva den gjør, hvor mye å ta, når du skal ta den, og hva du bør passe på.",
+    welcomeGuideResearchDesc: "En live-strøm med de nyeste forskningsfunnene på tvers av alle ingredienser i Biblioteket, samlet på ett sted.",
+    welcomeGuideStackDesc: "Velg hva du allerede tar og se umiddelbart synergier, overlapp og forsiktighetsregler mellom dem.",
+    welcomeGuideCompareDesc: "Sammenlign ekte merkevareprodukter side om side — som et spesifikt myseprotein mot et annet — med kildebelagte spesifikasjoner og priser.",
+    welcomeGuideNewsDesc: "Nettstedoppdateringer og forskningsoppsummeringer, publisert jevnlig.",
+    welcomeGuidePremiumDesc: "Vil du ha noe personlig? Få 1-til-1 trening og kosttilskudd-coaching direkte fra en ekte person.",
+    welcomeCta: "Start Utforskingen av Biblioteket",
     tabLibrary: "Bibliotek",
     tabResearch: "Forskning",
     tabStack: "Bygg Stacken",
@@ -286,6 +393,28 @@ const UI = {
     slotEvening: "Kveld",
     slotAnytime: "Når Som Helst",
     clearStack: "Fjern",
+    tabCompare: "Sammenlign",
+    compareIntro: "Ekte produkter, side om side — så du kan se hvilket som faktisk passer det du er ute etter.",
+    compareCategoryLabel: "Kategori:",
+    compareSelectLabel: "Produkter å sammenligne:",
+    compareEmptySub: "Velg minst ett produkt over.",
+    compareColBrand: "Merke",
+    compareColProduct: "Produkt",
+    compareColServing: "Porsjonsstørrelse",
+    compareColProtein: "Protein",
+    compareColCalories: "Kalorier",
+    compareColCarbs: "Karbohydrater",
+    compareColFat: "Fett",
+    compareColBcaa: "BCAA",
+    compareColSource: "Proteinkilde",
+    compareColSweeteners: "Søtningsstoffer",
+    compareColGrassFed: "Grass-Fed",
+    compareColCert: "Sertifiseringer",
+    compareColPrice: "Pris / Porsjon",
+    compareYes: "Ja",
+    compareNo: "Nei",
+    compareDataNote: "Tallene er hentet fra merke- og forhandleroppføringer og kan variere etter smak, batch eller region. Sjekk alltid etiketten på produktet du faktisk kjøper.",
+    compareSourceLink: "Se kilde",
     legalLink: "Vilkår & Ansvarsfraskrivelse",
     tabOverview: "Oversikt",
     tabResearchDetail: "Forskning",
@@ -319,9 +448,9 @@ const UI = {
       "Åndsverk — Alt originalt innhold på dette nettstedet er vårt eget arbeid. Ingrediensnavn og generelle vitenskapelige fakta eies ikke av oss og kan finnes på andre undervisningsressurser.",
       "Endringer — Vi kan oppdatere eller fjerne innhold når som helst uten varsel.",
     ],
-    aboutTitle: "Om Know Your Stack",
-    aboutText: "Vi laget Know Your Stack for å gjøre kosttilskuddsforskning lettere å forstå. Hver oppføring bygger på ekte studier og metaanalyser — ingen sponsede rangeringer, ingen affiliate-lenker, ingen produkter å selge. Bare et ærlig blikk på hva forskningen faktisk sier, slik at du kan bestemme selv hva som er verdt pengene.",
-    copyright: "© 2026 Know Your Stack. Alle rettigheter reservert.",
+    aboutTitle: "Om STCK",
+    aboutText: "Vi laget STCK for å gjøre kosttilskuddsforskning lettere å forstå. Hver oppføring bygger på ekte studier og metaanalyser — ingen sponsede rangeringer, ingen affiliate-lenker, ingen produkter å selge. Bare et ærlig blikk på hva forskningen faktisk sier, slik at du kan bestemme selv hva som er verdt pengene.",
+    copyright: "© 2026 STCK. Alle rettigheter reservert.",
   },
 };
 
@@ -377,6 +506,36 @@ export const INGREDIENTS = [
   { id: "collagen", category: "recovery", tags: [], timingSlot: "pre-workout", evidence: "Moderate", research: [{ headline: "A landmark study showed pre-loading doubles collagen synthesis", takeaway: "Shaw et al. (2017) found subjects who took vitamin C-enriched gelatin an hour before exercise showed double the blood marker of new collagen synthesis.", tag: "Randomized Trial (Shaw 2017)" }, { headline: "Not every study agrees — timing and tissue type matter", takeaway: "A more recent trial found collagen added to a week of resistance training didn't boost intramuscular connective tissue synthesis, suggesting protocol matters more than blanket supplementation.", tag: "Randomized Trial" }], goals: ["joints", "tendons"], mechanism: "Provides amino acids (glycine, proline) that form structural building blocks of connective tissue; pairing with vitamin C is studied to enhance collagen synthesis.", benefits: ["Studied for tendon/ligament health support", "Possible support under high-impact loading"], dosage: "10–15 g daily", timing: "30–60 min before load-bearing activity, with vitamin C", cautions: "Doesn't replace a complete-profile protein source.", i18n: { en: { name: "Collagen Peptides", tagline: "A structural protein for joints, tendons, and skin." }, el: { name: "Πεπτίδια Κολλαγόνου", tagline: "Δομική πρωτεΐνη για αρθρώσεις, τένοντες και δέρμα.", goals: ["αρθρώσεις", "τένοντες"], mechanism: "Παρέχει αμινοξέα (γλυκίνη, προλίνη) που αποτελούν δομικά «τούβλα» συνδετικού ιστού· η λήψη με βιταμίνη C ερευνάται για ενίσχυση σύνθεσης κολλαγόνου.", benefits: ["Ερευνάται για στήριξη υγείας τενόντων/συνδέσμων", "Πιθανή στήριξη σε φορτία υψηλής κρούσης"], dosage: "10–15 g ημερησίως", timing: "30–60' πριν από δραστηριότητα φόρτισης τενόντων, με βιταμίνη C", cautions: "Δεν υποκαθιστά πρωτεΐνη πλήρους προφίλ αμινοξέων.", research: [{ headline: "Βασική μελέτη έδειξε ότι η πρόληψη διπλασιάζει τη σύνθεση κολλαγόνου", takeaway: "Οι Shaw et al. (2017) βρήκαν διπλάσιο δείκτη σύνθεσης κολλαγόνου σε όσους πήραν ζελατίνη με βιταμίνη C μία ώρα πριν την άσκηση.", tag: "Τυχαιοποιημένη Δοκιμή (Shaw 2017)" }, { headline: "Δεν συμφωνούν όλες οι μελέτες — ο χρονισμός έχει σημασία", takeaway: "Μια πιο πρόσφατη δοκιμή δεν βρήκε αύξηση σύνθεσης ενδομυϊκού συνδετικού ιστού, δείχνοντας ότι το πρωτόκολλο μετράει.", tag: "Τυχαιοποιημένη Δοκιμή" }] }, es: { name: "Péptidos de Colágeno", tagline: "Una proteína estructural para articulaciones, tendones y piel." }, no: { name: "Kollagenpeptider", tagline: "Et strukturelt protein for ledd, sener og hud." } } },
   { id: "beetroot", category: "performance", tags: ["nitric-oxide"], timingSlot: "pre-workout", evidence: "High", research: [{ headline: "One of sports nutrition's most reliably reproduced effects", takeaway: "The oxygen-economy benefit from dietary nitrate has been replicated across dozens of studies.", tag: "Established Evidence Base" }, { headline: "Mouthwash studies proved the mechanism by removing it", takeaway: "Studies using antiseptic mouthwash to kill oral bacteria needed to convert nitrate to nitrite completely blocked the rise in blood nitrite, confirming the mechanism.", tag: "Mechanistic Study" }], goals: ["endurance", "blood flow"], mechanism: "Dietary nitrates convert to nitric oxide, improving oxygen economy during endurance exercise.", benefits: ["Improves endurance performance", "Reduces oxygen cost at a given intensity"], dosage: "~6–8 mmol nitrate (≈300–500ml beetroot juice)", timing: "2–3 hours before exercise", cautions: "Harmless discoloration of urine/stool. Avoid pairing with antiseptic mouthwash (reduces effect).", i18n: { en: { name: "Beetroot / Nitrate", tagline: "Dietary nitrates with proven endurance benefits." }, el: { name: "Παντζάρι / Νιτρικά", tagline: "Διαιτητικά νιτρικά με αποδεδειγμένη επίδραση στην αντοχή.", goals: ["αντοχή", "αιμάτωση"], mechanism: "Τα διαιτητικά νιτρικά μετατρέπονται σε νιτρικό οξείδιο, βελτιώνοντας την οικονομία οξυγόνου κατά την άσκηση αντοχής.", benefits: ["Βελτίωση απόδοσης σε αντοχή", "Μείωση κατανάλωσης οξυγόνου σε δεδομένη ένταση"], dosage: "~6–8 mmol νιτρικών (≈300-500ml χυμού παντζαριού)", timing: "2–3 ώρες πριν την άσκηση", cautions: "Αβλαβής χρώση ούρων/κοπράνων. Αποφυγή μαζί με αντισηπτικό στοματικό διάλυμα.", research: [{ headline: "Ένα από τα πιο αξιόπιστα αναπαραγόμενα αποτελέσματα στην αθλητική διατροφή", takeaway: "Το όφελος στην οικονομία οξυγόνου από τα διαιτητικά νιτρικά έχει αναπαραχθεί σε δεκάδες μελέτες.", tag: "Καθιερωμένη Βάση Τεκμηρίωσης" }, { headline: "Μελέτες με στοματικό διάλυμα απέδειξαν τον μηχανισμό αφαιρώντας τον", takeaway: "Στοματικό διάλυμα που σκότωσε τα βακτήρια του στόματος μπλόκαρε εντελώς την άνοδο του νιτρώδους στο αίμα.", tag: "Μηχανιστική Μελέτη" }] }, es: { name: "Remolacha / Nitrato", tagline: "Nitratos dietéticos con beneficios probados para la resistencia." }, no: { name: "Rødbete / Nitrat", tagline: "Kostnitrater med bevist utholdenhetseffekt." } } },
   { id: "lions-mane", category: "cognitive", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "A 16-week trial found real cognitive gains in older adults", takeaway: "Mori et al. (2009) found older adults with mild cognitive impairment who took lion's mane for 16 weeks scored significantly better on cognitive tests than placebo.", tag: "Randomized Trial (Mori 2009)" }, { headline: "Lab research shows a 200% boost to nerve growth signaling", takeaway: "Lab studies show the compounds erinacine and hericenone can boost nerve growth factor synthesis by up to 200%, not yet directly confirmed at that scale in humans.", tag: "Laboratory Research" }], goals: ["focus", "brain health"], mechanism: "Studied for possibly stimulating nerve growth factor (NGF) production, of interest for nerve health.", benefits: ["Studied for cognitive function/memory", "Traditional use for vitality"], dosage: "500–1000 mg extract", timing: "With a meal", cautions: "Limited human clinical data so far.", i18n: { en: { name: "Lion's Mane Mushroom", tagline: "A mushroom traditionally used to support brain health." }, el: { name: "Χαίτη Λιονταριού", tagline: "Μύκητας με παραδοσιακή χρήση για νευρική υγεία.", goals: ["εστίαση", "γνωστική υγεία"], mechanism: "Ερευνάται για πιθανή διέγερση παραγωγής νευροτροφικών παραγόντων (NGF), με ενδιαφέρον για νευρική υγεία.", benefits: ["Ερευνάται για γνωστική λειτουργία/μνήμη", "Παραδοσιακή χρήση για ζωτικότητα"], dosage: "500–1000 mg εκχυλίσματος", timing: "Με γεύμα", cautions: "Περιορισμένα ανθρώπινα κλινικά δεδομένα ακόμη.", research: [{ headline: "Δοκιμή 16 εβδομάδων βρήκε πραγματικά γνωστικά κέρδη σε ηλικιωμένους", takeaway: "Οι Mori et al. (2009) βρήκαν καλύτερα αποτελέσματα σε γνωστικά τεστ σε ηλικιωμένους με ήπια γνωστική εξασθένηση μετά από 16 εβδομάδες.", tag: "Τυχαιοποιημένη Δοκιμή (Mori 2009)" }, { headline: "Εργαστηριακή έρευνα δείχνει αύξηση 200% στη σηματοδότηση νευρικής ανάπτυξης", takeaway: "Οι ενώσεις erinacine και hericenone μπορούν να αυξήσουν τη σύνθεση νευροτροφικού παράγοντα έως 200% σε εργαστηριακές μελέτες.", tag: "Εργαστηριακή Έρευνα" }] }, es: { name: "Melena de León", tagline: "Un hongo usado tradicionalmente para apoyar la salud cerebral." }, no: { name: "Løvemanke-sopp", tagline: "En sopp tradisjonelt brukt for å støtte hjernehelsen." } } },
+  { id: "flaxseed-oil", category: "health", tags: [], timingSlot: "anytime", evidence: "Moderate", research: [{ headline: "ALA doesn't convert efficiently to EPA/DHA", takeaway: "Studies show only about 5-10% of the plant omega-3 ALA in flaxseed oil converts to EPA and less than 5% to DHA in the body, far less than getting EPA/DHA directly from fish sources.", tag: "Metabolic Research" }], goals: ["heart health", "plant omega-3"], mechanism: "Rich in alpha-linolenic acid (ALA), a plant-based omega-3 that the body can partially convert to EPA/DHA, plus lignans with antioxidant properties.", benefits: ["Plant-based omega-3 source", "May support cholesterol profile", "Vegan alternative to fish oil"], dosage: "1–2 tbsp (14–28 g) daily", timing: "With a meal", cautions: "Much weaker EPA/DHA delivery than fish or algae oil. Can oxidize/go rancid quickly — store cold.", i18n: { en: { name: "Flaxseed Oil", tagline: "A plant-based omega-3, but a weaker source than fish oil." }, el: { name: "Λάδι Λιναρόσπορου", tagline: "Φυτικό ωμέγα-3, αλλά ασθενέστερη πηγή από το ιχθυέλαιο.", goals: ["καρδιαγγειακή υγεία", "φυτικά ωμέγα-3"], mechanism: "Πλούσιο σε άλφα-λινολενικό οξύ (ALA), φυτικό ωμέγα-3 που το σώμα μετατρέπει εν μέρει σε EPA/DHA, καθώς και λιγνάνες με αντιοξειδωτικές ιδιότητες.", benefits: ["Φυτική πηγή ωμέγα-3", "Πιθανή στήριξη λιπιδαιμικού προφίλ", "Vegan εναλλακτική του ιχθυελαίου"], dosage: "1–2 κ.σ. (14–28 g) ημερησίως", timing: "Με γεύμα", cautions: "Πολύ ασθενέστερη παροχή EPA/DHA σε σχέση με ιχθυέλαιο. Οξειδώνεται εύκολα — αποθήκευση σε ψύξη.", research: [{ headline: "Το ALA δεν μετατρέπεται αποτελεσματικά σε EPA/DHA", takeaway: "Μελέτες δείχνουν ότι μόνο 5-10% του φυτικού ωμέγα-3 ALA στο λιναρόσπορο μετατρέπεται σε EPA και λιγότερο από 5% σε DHA στο σώμα.", tag: "Μεταβολική Έρευνα" }] }, es: { name: "Aceite de Linaza", tagline: "Un omega-3 de origen vegetal, pero una fuente más débil que el aceite de pescado." }, no: { name: "Linfrøolje", tagline: "En plantebasert omega-3, men en svakere kilde enn fiskeolje." } } },
+  { id: "raspberry-ketones", category: "health", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "Human evidence is essentially absent", takeaway: "Nearly all supporting data comes from rodent studies using doses far higher than what's realistic in a supplement; controlled human trials on raspberry ketones alone are lacking.", tag: "Evidence Gap" }], goals: ["fat loss"], mechanism: "Structurally similar to synephrine and capsaicin; theorized to affect fat cell metabolism (lipolysis), but this is based almost entirely on animal/cell studies.", benefits: ["Marketed for fat loss", "Antioxidant properties in lab studies"], dosage: "100–200 mg daily (typical label dose)", timing: "Morning, with a meal", cautions: "One of the weakest-evidenced popular fat-loss ingredients; treat marketing claims skeptically.", i18n: { en: { name: "Raspberry Ketones", tagline: "A popular fat-loss ingredient with almost no human evidence behind it." }, el: { name: "Κετόνες Σμέουρου", tagline: "Δημοφιλές συστατικό λιπόλυσης με σχεδόν καθόλου ανθρώπινα στοιχεία.", goals: ["λιπόλυση"], mechanism: "Δομικά παρόμοιο με τη συνεφρίνη και την καψαϊκίνη· θεωρητικά επηρεάζει τον μεταβολισμό λιποκυττάρων, αλλά σχεδόν όλα τα στοιχεία προέρχονται από ζωικές/κυτταρικές μελέτες.", benefits: ["Διαφημίζεται για λιπόλυση", "Αντιοξειδωτικές ιδιότητες σε εργαστηριακές μελέτες"], dosage: "100–200 mg ημερησίως (συνήθης δόση ετικέτας)", timing: "Πρωί, με γεύμα", cautions: "Ένα από τα πιο αδύναμα τεκμηριωμένα δημοφιλή συστατικά λιπόλυσης· αντιμετώπισε τους ισχυρισμούς μάρκετινγκ με σκεπτικισμό.", research: [{ headline: "Τα ανθρώπινα δεδομένα ουσιαστικά απουσιάζουν", takeaway: "Σχεδόν όλα τα υποστηρικτικά δεδομένα προέρχονται από μελέτες σε τρωκτικά με δόσεις πολύ υψηλότερες από ό,τι είναι ρεαλιστικό σε συμπλήρωμα.", tag: "Κενό Τεκμηρίωσης" }] }, es: { name: "Cetonas de Frambuesa", tagline: "Un popular ingrediente para pérdida de grasa con casi ninguna evidencia humana." }, no: { name: "Bringebærketoner", tagline: "En populær fettforbrenningsingrediens med nesten ingen bevis fra mennesker." } } },
+  { id: "creatine-forms", category: "muscle", tags: [], timingSlot: "anytime", evidence: "Moderate", research: [{ headline: "Head-to-head trials keep confirming monohydrate wins", takeaway: "Comparative studies of creatine HCl, ethyl ester, buffered (Kre-Alkalyn), and micronized forms against monohydrate consistently find no strength or muscle advantage, despite marketing claims of better absorption.", tag: "Comparative Trials" }], goals: ["strength", "muscle mass"], mechanism: "All forms deliver the same active creatine molecule to muscle; differences are mainly in solubility and marketing, not in what actually reaches the muscle cell.", benefits: ["Same end result as monohydrate in most trials", "Some forms dissolve better in water"], dosage: "Equivalent creatine content to 3–5 g monohydrate", timing: "Any time of day", cautions: "Monohydrate remains the most-studied, cheapest, and safest reference form — newer forms haven't outperformed it.", i18n: { en: { name: "Creatine Forms (HCl, Ethyl Ester, Buffered)", tagline: "Marketed alternatives to monohydrate — evidence says skip the upsell." }, el: { name: "Μορφές Κρεατίνης (HCl, Ethyl Ester, Buffered)", tagline: "Εμπορικές εναλλακτικές της μονοϋδρικής — τα στοιχεία λένε να τις προσπεράσεις.", goals: ["δύναμη", "μυϊκή μάζα"], mechanism: "Όλες οι μορφές παρέχουν το ίδιο ενεργό μόριο κρεατίνης στον μυ· οι διαφορές αφορούν κυρίως διαλυτότητα και μάρκετινγκ, όχι το τι φτάνει στο κύτταρο.", benefits: ["Ίδιο τελικό αποτέλεσμα με τη μονοϋδρική στις περισσότερες δοκιμές", "Ορισμένες μορφές διαλύονται καλύτερα στο νερό"], dosage: "Ισοδύναμη περιεκτικότητα κρεατίνης με 3–5 g μονοϋδρικής", timing: "Οποιαδήποτε ώρα", cautions: "Η μονοϋδρική παραμένει η πιο μελετημένη, φθηνότερη και ασφαλέστερη μορφή αναφοράς.", research: [{ headline: "Συγκριτικές δοκιμές επιβεβαιώνουν συνεχώς το προβάδισμα της μονοϋδρικής", takeaway: "Συγκριτικές μελέτες κρεατίνης HCl, ethyl ester, buffered (Kre-Alkalyn) και micronized έναντι μονοϋδρικής δεν βρίσκουν πλεονέκτημα σε δύναμη ή μυϊκή μάζα.", tag: "Συγκριτικές Δοκιμές" }] }, es: { name: "Formas de Creatina (HCl, Éster Etílico, Tamponada)", tagline: "Alternativas comercializadas al monohidrato — la evidencia dice que no vale la pena pagar más." }, no: { name: "Kreatinformer (HCl, Etylester, Bufret)", tagline: "Markedsførte alternativer til monohydrat — bevisene sier du kan hoppe over merkostnaden." } } },
+  { id: "boron", category: "health", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "Small trials show a modest free-testosterone bump", takeaway: "Short-term studies in men supplementing 6-10mg of boron daily found measurable increases in free testosterone and reductions in estradiol and inflammatory markers, though sample sizes remain small.", tag: "Small Clinical Trials" }], goals: ["hormones", "bone health"], mechanism: "A trace mineral studied for roles in steroid hormone metabolism and bone/joint health; thought to reduce SHBG, freeing up more active testosterone.", benefits: ["Studied for free testosterone support", "Possible support for bone/joint health"], dosage: "3–10 mg daily", timing: "With a meal", cautions: "Evidence base is still small-scale; long-term safety data at supplemental doses is limited.", i18n: { en: { name: "Boron", tagline: "A trace mineral studied for hormone and bone support." }, el: { name: "Βόριο", tagline: "Ιχνοστοιχείο που ερευνάται για στήριξη ορμονών και οστών.", goals: ["ορμόνες", "οστική υγεία"], mechanism: "Ιχνοστοιχείο που ερευνάται για ρόλο στον μεταβολισμό στεροειδών ορμονών και οστική/αρθρική υγεία· θεωρείται ότι μειώνει την SHBG.", benefits: ["Ερευνάται για στήριξη ελεύθερης τεστοστερόνης", "Πιθανή στήριξη οστικής/αρθρικής υγείας"], dosage: "3–10 mg ημερησίως", timing: "Με γεύμα", cautions: "Η βάση τεκμηρίωσης παραμένει μικρής κλίμακας· περιορισμένα μακροχρόνια δεδομένα ασφάλειας.", research: [{ headline: "Μικρές δοκιμές δείχνουν μέτρια αύξηση ελεύθερης τεστοστερόνης", takeaway: "Βραχυπρόθεσμες μελέτες σε άνδρες με 6-10mg βόριο ημερησίως βρήκαν μετρήσιμη αύξηση ελεύθερης τεστοστερόνης και μείωση οιστραδιόλης, αν και τα δείγματα παραμένουν μικρά.", tag: "Μικρές Κλινικές Δοκιμές" }] }, es: { name: "Boro", tagline: "Un mineral traza estudiado por su apoyo hormonal y óseo." }, no: { name: "Bor", tagline: "Et sporstoff studert for hormon- og benstøtte." } } },
+  { id: "mucuna-pruriens", category: "cognitive", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "Contains natural L-DOPA, the direct dopamine precursor", takeaway: "Mucuna seed extract naturally contains 4-7% L-DOPA by weight — the same compound used in prescription Parkinson's medication — and clinical trials in Parkinson's patients confirm measurable increases in blood L-DOPA and symptom improvement.", tag: "Clinical Trials" }], goals: ["mood", "dopamine support"], mechanism: "Seeds naturally contain L-DOPA, which crosses the blood-brain barrier and converts to dopamine — most research has focused on Parkinson's disease rather than healthy trainees.", benefits: ["Studied for Parkinson's symptom relief", "Traditional use for mood/vitality"], dosage: "500 mg–5 g standardized powder daily", timing: "Morning, on an empty stomach", cautions: "Can interact with MAOI/dopaminergic medications. Not well studied in healthy young adults for fitness goals.", i18n: { en: { name: "Mucuna Pruriens", tagline: "A tropical legume rich in natural L-DOPA, the dopamine precursor." }, el: { name: "Mucuna Pruriens", tagline: "Τροπικό όσπριο πλούσιο σε φυσική L-DOPA, πρόδρομο της ντοπαμίνης.", goals: ["διάθεση", "στήριξη ντοπαμίνης"], mechanism: "Οι σπόροι περιέχουν φυσικά L-DOPA, που διαπερνά τον αιματοεγκεφαλικό φραγμό και μετατρέπεται σε ντοπαμίνη — η έρευνα εστιάζει κυρίως σε Πάρκινσον, όχι υγιείς ασκούμενους.", benefits: ["Ερευνάται για ανακούφιση συμπτωμάτων Πάρκινσον", "Παραδοσιακή χρήση για διάθεση/ζωτικότητα"], dosage: "500 mg–5 g τυποποιημένης σκόνης ημερησίως", timing: "Πρωί, με άδειο στομάχι", cautions: "Πιθανή αλληλεπίδραση με φάρμακα MAOI/ντοπαμινεργικά. Δεν έχει μελετηθεί καλά σε υγιείς νέους για αθλητικούς στόχους.", research: [{ headline: "Περιέχει φυσική L-DOPA, τον άμεσο πρόδρομο ντοπαμίνης", takeaway: "Το εκχύλισμα σπόρου Mucuna περιέχει φυσικά 4-7% L-DOPA κατά βάρος — την ίδια ένωση που χρησιμοποιείται σε φάρμακα για Πάρκινσον — και κλινικές δοκιμές επιβεβαιώνουν αύξηση L-DOPA στο αίμα.", tag: "Κλινικές Δοκιμές" }] }, es: { name: "Mucuna Pruriens", tagline: "Una legumbre tropical rica en L-DOPA natural, el precursor de la dopamina." }, no: { name: "Mucuna Pruriens", tagline: "Et tropisk belgfrukt rikt på naturlig L-DOPA, dopaminforløperen." } } },
+  { id: "krill-oil", category: "health", tags: ["blood-thinning"], timingSlot: "anytime", evidence: "Moderate", research: [{ headline: "Phospholipid form may absorb differently than fish oil", takeaway: "Krill oil delivers EPA/DHA bound to phospholipids rather than triglycerides; several studies suggest this form may be absorbed more efficiently at lower doses, though results are mixed across trials.", tag: "Comparative Studies" }], goals: ["heart health", "inflammation"], mechanism: "EPA/DHA bound to phospholipids (vs. triglycerides in fish oil), plus the antioxidant astaxanthin which may help protect the oil from oxidation.", benefits: ["Source of EPA/DHA omega-3s", "Contains astaxanthin antioxidant", "May cause less fishy aftertaste than fish oil"], dosage: "1–2 g daily (≈250–500mg EPA/DHA)", timing: "With a meal", cautions: "Shellfish-derived — avoid with shellfish allergy. Mild blood-thinning effect at high doses.", i18n: { en: { name: "Krill Oil", tagline: "A phospholipid-bound omega-3 source from Antarctic krill." }, el: { name: "Λάδι Κριλ", tagline: "Πηγή ωμέγα-3 δεμένη σε φωσφολιπίδια, από κριλ της Ανταρκτικής.", goals: ["καρδιαγγειακή υγεία", "φλεγμονή"], mechanism: "EPA/DHA δεμένα σε φωσφολιπίδια (αντί τριγλυκεριδίων στο ιχθυέλαιο), συν το αντιοξειδωτικό astaxanthin που προστατεύει το λάδι από οξείδωση.", benefits: ["Πηγή EPA/DHA ωμέγα-3", "Περιέχει το αντιοξειδωτικό astaxanthin", "Πιθανώς λιγότερη 'ψαρίλα' από το ιχθυέλαιο"], dosage: "1–2 g ημερησίως (≈250–500mg EPA/DHA)", timing: "Με γεύμα", cautions: "Προέρχεται από οστρακοειδή — αποφυγή σε αλλεργία οστρακοειδών. Ήπια αντιπηκτική δράση σε υψηλές δόσεις.", research: [{ headline: "Η φωσφολιπιδική μορφή μπορεί να απορροφάται διαφορετικά από το ιχθυέλαιο", takeaway: "Το κριλέλαιο παρέχει EPA/DHA δεμένα σε φωσφολιπίδια αντί για τριγλυκερίδια· αρκετές μελέτες δείχνουν πιθανή καλύτερη απορρόφηση σε χαμηλότερες δόσεις.", tag: "Συγκριτικές Μελέτες" }] }, es: { name: "Aceite de Kril", tagline: "Una fuente de omega-3 unida a fosfolípidos proveniente del kril antártico." }, no: { name: "Krillolje", tagline: "En fosfolipid-bundet omega-3-kilde fra antarktisk krill." } } },
+  { id: "cod-liver-oil", category: "health", tags: ["blood-thinning"], timingSlot: "anytime", evidence: "Moderate", research: [{ headline: "Delivers a unique combo — omega-3s plus vitamins A and D", takeaway: "Unlike standard fish body oil, cod liver oil naturally contains meaningful amounts of vitamin A and vitamin D alongside EPA/DHA, making dosing more complex since all three are fat-soluble and can accumulate.", tag: "Nutrient Composition Data" }], goals: ["heart health", "bone health", "immune"], mechanism: "Extracted from cod liver rather than body tissue, so it naturally carries fat-soluble vitamins A and D alongside the same EPA/DHA found in regular fish oil.", benefits: ["Combines omega-3s with vitamin A and D", "Traditional use for joint/bone health"], dosage: "1 tsp (≈5ml) or per label — watch total vitamin A intake", timing: "With a meal", cautions: "Easy to overdose on vitamin A if also taking a separate multivitamin — check combined totals.", i18n: { en: { name: "Cod Liver Oil", tagline: "A traditional omega-3 source that also carries vitamins A and D." }, el: { name: "Μουρουνέλαιο", tagline: "Παραδοσιακή πηγή ωμέγα-3 που φέρει και βιταμίνες A και D.", goals: ["καρδιαγγειακή υγεία", "οστική υγεία", "ανοσοποιητικό"], mechanism: "Εξάγεται από το συκώτι του μπακαλιάρου αντί για τον ιστό του σώματος, οπότε φέρει φυσικά λιποδιαλυτές βιταμίνες A και D μαζί με EPA/DHA.", benefits: ["Συνδυάζει ωμέγα-3 με βιταμίνη A και D", "Παραδοσιακή χρήση για αρθρική/οστική υγεία"], dosage: "1 κ.γ. (≈5ml) ή βάσει ετικέτας — προσοχή στη συνολική πρόσληψη βιταμίνης A", timing: "Με γεύμα", cautions: "Εύκολη υπερβολική δόση βιταμίνης A αν λαμβάνεται και ξεχωριστή πολυβιταμίνη — έλεγξε το άθροισμα.", research: [{ headline: "Παρέχει μοναδικό συνδυασμό — ωμέγα-3 συν βιταμίνες A και D", takeaway: "Σε αντίθεση με το απλό ιχθυέλαιο, το μουρουνέλαιο περιέχει φυσικά σημαντικές ποσότητες βιταμίνης A και D μαζί με EPA/DHA, κάνοντας τη δοσολογία πιο σύνθετη.", tag: "Δεδομένα Σύνθεσης Θρεπτικών" }] }, es: { name: "Aceite de Hígado de Bacalao", tagline: "Una fuente tradicional de omega-3 que también aporta vitaminas A y D." }, no: { name: "Tran (Torskeleverolje)", tagline: "En tradisjonell omega-3-kilde som også gir vitamin A og D." } } },
+  { id: "gynostemma-pentaphyllum", category: "health", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "Traditional 'immortality herb' studied for metabolic effects", takeaway: "Small clinical trials in China and Korea have studied Gynostemma pentaphyllum (jiaogulan) for blood sugar regulation and lipid profile, with some showing modest improvements, though the evidence base outside Asia remains thin.", tag: "Regional Clinical Trials" }], goals: ["metabolic health", "antioxidant"], mechanism: "Contains gypenosides, saponins structurally similar to those in ginseng, studied for antioxidant and metabolic-regulating properties.", benefits: ["Traditional adaptogen use", "Studied for blood sugar/lipid support"], dosage: "1–3 g dried herb or per extract label", timing: "Morning, with a meal", cautions: "Limited large-scale Western clinical data; quality varies widely between suppliers.", i18n: { en: { name: "Gynostemma Pentaphyllum", tagline: "A traditional Chinese adaptogenic herb, also called jiaogulan." }, el: { name: "Gynostemma Pentaphyllum", tagline: "Παραδοσιακό κινέζικο προσαρμογόνο βότανο, γνωστό και ως jiaogulan.", goals: ["μεταβολική υγεία", "αντιοξειδωτικά"], mechanism: "Περιέχει γυπενοσίδες, σαπωνίνες δομικά παρόμοιες με αυτές του ginseng, που ερευνώνται για αντιοξειδωτικές και μεταβολικές ιδιότητες.", benefits: ["Παραδοσιακή χρήση ως προσαρμογόνο", "Ερευνάται για στήριξη σακχάρου/λιπιδίων"], dosage: "1–3 g ξηρού βοτάνου ή βάσει ετικέτας εκχυλίσματος", timing: "Πρωί, με γεύμα", cautions: "Περιορισμένα δυτικά κλινικά δεδομένα μεγάλης κλίμακας· η ποιότητα ποικίλλει σημαντικά μεταξύ προμηθευτών.", research: [{ headline: "Παραδοσιακό «βότανο της αθανασίας» ερευνάται για μεταβολικές επιδράσεις", takeaway: "Μικρές κλινικές δοκιμές στην Κίνα και Κορέα ερεύνησαν το Gynostemma pentaphyllum (jiaogulan) για ρύθμιση σακχάρου και λιπιδίων, με ορισμένες να δείχνουν μέτρια βελτίωση.", tag: "Περιφερειακές Κλινικές Δοκιμές" }] }, es: { name: "Gynostemma Pentaphyllum", tagline: "Una hierba adaptógena tradicional china, también llamada jiaogulan." }, no: { name: "Gynostemma Pentaphyllum", tagline: "En tradisjonell kinesisk adaptogen urt, også kalt jiaogulan." } } },
+  { id: "echinacea-purpurea", category: "health", tags: [], timingSlot: "morning", evidence: "Moderate", research: [{ headline: "Cochrane review found a modest preventive effect", takeaway: "A Cochrane systematic review of prevention trials found echinacea products reduced the odds of catching a cold by about 10-20%, though the effect on treating an active cold was weaker and less consistent.", tag: "Cochrane Review" }], goals: ["immune"], mechanism: "Contains alkylamides and polysaccharides studied for stimulating immune cell activity, particularly around upper respiratory infections.", benefits: ["Modest reduction in cold frequency", "Traditional immune support use"], dosage: "300–500 mg extract, 2–3 times daily at first symptoms", timing: "At onset of symptoms, or daily during high-exposure periods", cautions: "Avoid with autoimmune conditions; effects can vary widely by extract/species used.", i18n: { en: { name: "Echinacea Purpurea", tagline: "A traditional immune-support herb with modest cold-prevention evidence." }, el: { name: "Echinacea Purpurea", tagline: "Παραδοσιακό βότανο στήριξης ανοσοποιητικού με μέτρια στοιχεία πρόληψης κρυολογήματος.", goals: ["ανοσοποιητικό"], mechanism: "Περιέχει αλκυλαμίδια και πολυσακχαρίτες που ερευνώνται για διέγερση ανοσοκυττάρων, ιδίως γύρω από λοιμώξεις ανώτερου αναπνευστικού.", benefits: ["Μέτρια μείωση συχνότητας κρυολογήματος", "Παραδοσιακή χρήση για ανοσοποιητικό"], dosage: "300–500 mg εκχυλίσματος, 2-3 φορές ημερησίως στα πρώτα συμπτώματα", timing: "Στην εμφάνιση συμπτωμάτων, ή καθημερινά σε περιόδους υψηλής έκθεσης", cautions: "Αποφυγή σε αυτοάνοσα νοσήματα· τα αποτελέσματα ποικίλλουν σημαντικά ανάλογα με το εκχύλισμα/είδος.", research: [{ headline: "Ανασκόπηση Cochrane βρήκε μέτριο προληπτικό όφελος", takeaway: "Μια συστηματική ανασκόπηση Cochrane σε δοκιμές πρόληψης βρήκε ότι τα προϊόντα echinacea μείωσαν την πιθανότητα κρυολογήματος κατά 10-20%, ενώ το όφελος στη θεραπεία ενεργού κρυολογήματος ήταν ασθενέστερο.", tag: "Ανασκόπηση Cochrane" }] }, es: { name: "Echinacea Purpurea", tagline: "Una hierba tradicional de apoyo inmunitario con evidencia modesta de prevención de resfriados." }, no: { name: "Echinacea Purpurea", tagline: "En tradisjonell immunstøttende urt med moderate bevis for forkjølelsesforebygging." } } },
+  { id: "vitamin-b-complex", category: "health", tags: [], timingSlot: "morning", evidence: "Moderate", research: [{ headline: "Clearest benefit shows up in people who are actually deficient", takeaway: "B-vitamin trials consistently show the strongest, most measurable benefits — energy, mood, nerve function — in people with a genuine deficiency (common in vegans, older adults, and heavy drinkers), with weaker effects in already-replete individuals.", tag: "Clinical Nutrition Research" }], goals: ["energy", "nervous system"], mechanism: "B-vitamins (B1, B2, B3, B5, B6, B7, B9, B12) act as coenzymes in energy metabolism, red blood cell formation, and nervous system function.", benefits: ["Supports energy metabolism", "Particularly relevant for vegans (B12) and heavy trainees"], dosage: "1 dose/day per label (varies by formulation)", timing: "Morning, with a meal", cautions: "High-dose B6 (>100mg/day) long-term has been linked to nerve issues.", i18n: { en: { name: "Vitamin B-Complex", tagline: "A group of coenzyme vitamins essential for energy metabolism." }, el: { name: "Σύμπλεγμα Βιταμινών Β", tagline: "Ομάδα συνενζυμικών βιταμινών απαραίτητων για τον ενεργειακό μεταβολισμό.", goals: ["ενέργεια", "νευρικό σύστημα"], mechanism: "Οι βιταμίνες Β (B1, B2, B3, B5, B6, B7, B9, B12) λειτουργούν ως συνένζυμα στον ενεργειακό μεταβολισμό, τον σχηματισμό ερυθρών αιμοσφαιρίων και τη νευρική λειτουργία.", benefits: ["Στήριξη ενεργειακού μεταβολισμού", "Ιδιαίτερα σημαντικό για vegans (B12) και έντονα προπονούμενους"], dosage: "1 δόση/ημέρα βάσει ετικέτας", timing: "Πρωί, με γεύμα", cautions: "Υψηλές δόσεις B6 (>100mg/ημέρα) μακροχρόνια έχουν συνδεθεί με νευρικά προβλήματα.", research: [{ headline: "Το σαφέστερο όφελος εμφανίζεται σε όσους έχουν πραγματική ανεπάρκεια", takeaway: "Οι δοκιμές βιταμινών Β δείχνουν σταθερά τα ισχυρότερα οφέλη — ενέργεια, διάθεση, νευρική λειτουργία — σε άτομα με πραγματική ανεπάρκεια (συχνή σε vegan, ηλικιωμένους), με ασθενέστερα αποτελέσματα σε ήδη επαρκή άτομα.", tag: "Έρευνα Κλινικής Διατροφής" }] }, es: { name: "Complejo de Vitamina B", tagline: "Un grupo de vitaminas coenzimáticas esenciales para el metabolismo energético." }, no: { name: "Vitamin B-Kompleks", tagline: "En gruppe koenzym-vitaminer essensielle for energimetabolismen." } } },
+  { id: "vitamin-c", category: "health", tags: [], timingSlot: "anytime", evidence: "High", research: [{ headline: "Doesn't prevent colds, but shortens them slightly", takeaway: "A Cochrane review of over 11,000 participants found regular vitamin C supplementation didn't reduce the number of colds in the general population, but consistently shortened cold duration by about 8% in adults.", tag: "Cochrane Review" }], goals: ["immune", "antioxidant", "collagen synthesis"], mechanism: "A water-soluble antioxidant and essential cofactor for collagen synthesis and immune cell function.", benefits: ["Supports immune function", "Cofactor for collagen production", "Antioxidant activity"], dosage: "500–1000 mg daily", timing: "Any time; pairs well with collagen supplementation", cautions: "Very high doses (>2g) may cause GI upset.", i18n: { en: { name: "Vitamin C", tagline: "A well-known antioxidant and essential collagen cofactor." }, el: { name: "Βιταμίνη C", tagline: "Γνωστό αντιοξειδωτικό και απαραίτητος συμπαράγοντας κολλαγόνου.", goals: ["ανοσοποιητικό", "αντιοξειδωτικά", "σύνθεση κολλαγόνου"], mechanism: "Υδατοδιαλυτό αντιοξειδωτικό και απαραίτητος συμπαράγοντας για τη σύνθεση κολλαγόνου και την ανοσολογική λειτουργία.", benefits: ["Στήριξη ανοσοποιητικού", "Συμπαράγοντας παραγωγής κολλαγόνου", "Αντιοξειδωτική δράση"], dosage: "500–1000 mg ημερησίως", timing: "Οποιαδήποτε ώρα· ταιριάζει καλά με συμπλήρωση κολλαγόνου", cautions: "Πολύ υψηλές δόσεις (>2g) μπορεί να προκαλέσουν γαστρεντερική δυσφορία.", research: [{ headline: "Δεν προλαμβάνει τα κρυολογήματα, αλλά τα μικραίνει ελαφρώς", takeaway: "Μια ανασκόπηση Cochrane σε πάνω από 11.000 συμμετέχοντες βρήκε ότι η τακτική βιταμίνη C δεν μείωσε τα κρυολογήματα στον γενικό πληθυσμό, αλλά μείωσε σταθερά τη διάρκειά τους κατά περίπου 8% σε ενήλικες.", tag: "Ανασκόπηση Cochrane" }] }, es: { name: "Vitamina C", tagline: "Un antioxidante conocido y un cofactor esencial del colágeno." }, no: { name: "Vitamin C", tagline: "En kjent antioksidant og essensiell kollagen-kofaktor." } } },
+  { id: "vitamins-a-e-k", category: "health", tags: [], timingSlot: "anytime", evidence: "Moderate", research: [{ headline: "Fat-soluble vitamins require fat to absorb — and can accumulate", takeaway: "Unlike water-soluble vitamins, A, E, and K are stored in body fat and the liver, meaning excess doses (especially of A) don't simply get excreted — chronic over-supplementation carries real toxicity risk.", tag: "Pharmacology Research" }], goals: ["vision", "bone health", "blood clotting", "antioxidant"], mechanism: "Vitamin A supports vision and immune function; Vitamin E is a fat-soluble antioxidant; Vitamin K2 directs calcium toward bone rather than arteries.", benefits: ["A: vision & immune support", "E: antioxidant protection", "K2: works with vitamin D for bone/artery calcium regulation"], dosage: "Per label — typically A: 700–900mcg, E: 15mg, K2: 90–120mcg", timing: "With a meal containing fat", cautions: "Avoid mega-dosing vitamin A, especially during pregnancy — it's the most toxic fat-soluble vitamin in excess.", i18n: { en: { name: "Vitamins A, E & K", tagline: "The other fat-soluble vitamins — best taken with a meal containing fat." }, el: { name: "Βιταμίνες A, E & K", tagline: "Οι υπόλοιπες λιποδιαλυτές βιταμίνες — καλύτερα με γεύμα που περιέχει λίπος.", goals: ["όραση", "οστική υγεία", "πήξη αίματος", "αντιοξειδωτικά"], mechanism: "Η βιταμίνη A στηρίζει όραση και ανοσοποιητικό· η E είναι λιποδιαλυτό αντιοξειδωτικό· η K2 κατευθύνει το ασβέστιο προς τα οστά αντί για τις αρτηρίες.", benefits: ["A: στήριξη όρασης & ανοσοποιητικού", "E: αντιοξειδωτική προστασία", "K2: συνεργάζεται με τη D για ρύθμιση ασβεστίου οστών/αρτηριών"], dosage: "Βάσει ετικέτας — συνήθως A: 700–900mcg, E: 15mg, K2: 90–120mcg", timing: "Με γεύμα που περιέχει λίπος", cautions: "Αποφυγή υπερβολικής δόσης βιταμίνης A, ιδίως σε εγκυμοσύνη — η πιο τοξική λιποδιαλυτή βιταμίνη σε περίσσεια.", research: [{ headline: "Οι λιποδιαλυτές βιταμίνες χρειάζονται λίπος για απορρόφηση — και συσσωρεύονται", takeaway: "Σε αντίθεση με τις υδατοδιαλυτές, οι A, E, K αποθηκεύονται στο λίπος και το συκώτι, οπότε η περίσσεια (ειδικά της A) δεν αποβάλλεται απλά — η χρόνια υπερβολική λήψη έχει πραγματικό κίνδυνο τοξικότητας.", tag: "Φαρμακολογική Έρευνα" }] }, es: { name: "Vitaminas A, E y K", tagline: "Las otras vitaminas liposolubles — mejor tomadas con una comida que contenga grasa." }, no: { name: "Vitamin A, E og K", tagline: "De andre fettløselige vitaminene — best tatt med et fettholdig måltid." } } },
+  { id: "quercetin", category: "health", tags: [], timingSlot: "morning", evidence: "Moderate", research: [{ headline: "Pairs with exercise to modestly reduce infection risk", takeaway: "A meta-analysis found quercetin supplementation reduced upper respiratory tract infection incidence specifically in physically stressed/exercising populations, with less clear benefit in sedentary people.", tag: "Meta-Analysis" }], goals: ["immune", "antioxidant"], mechanism: "A flavonoid antioxidant found in onions/apples, studied for anti-inflammatory and immune-modulating effects, especially around intense training periods.", benefits: ["Studied for reduced infection risk during heavy training", "Antioxidant/anti-inflammatory activity"], dosage: "500–1000 mg daily", timing: "With a meal", cautions: "Poor bioavailability alone — often paired with bromelain or vitamin C to improve absorption.", i18n: { en: { name: "Quercetin", tagline: "A plant flavonoid studied for immune support during heavy training." }, el: { name: "Κερκετίνη", tagline: "Φυτικό φλαβονοειδές που ερευνάται για ανοσοποιητική στήριξη σε έντονη προπόνηση.", goals: ["ανοσοποιητικό", "αντιοξειδωτικά"], mechanism: "Φλαβονοειδές αντιοξειδωτικό που βρίσκεται σε κρεμμύδια/μήλα, ερευνάται για αντιφλεγμονώδη και ανοσορυθμιστική δράση, ιδίως σε περιόδους έντονης προπόνησης.", benefits: ["Ερευνάται για μειωμένο κίνδυνο λοίμωξης σε έντονη προπόνηση", "Αντιοξειδωτική/αντιφλεγμονώδης δράση"], dosage: "500–1000 mg ημερησίως", timing: "Με γεύμα", cautions: "Χαμηλή βιοδιαθεσιμότητα μόνη της — συχνά συνδυάζεται με βρωμελίνη ή βιταμίνη C.", research: [{ headline: "Συνδυάζεται με άσκηση για μέτρια μείωση κινδύνου λοίμωξης", takeaway: "Μια μετα-ανάλυση βρήκε ότι η κερκετίνη μείωσε τη συχνότητα λοιμώξεων ανώτερου αναπνευστικού ειδικά σε πληθυσμούς με φυσική καταπόνηση/άσκηση.", tag: "Μετα-ανάλυση" }] }, es: { name: "Quercetina", tagline: "Un flavonoide vegetal estudiado por su apoyo inmunitario durante entrenamientos intensos." }, no: { name: "Quercetin", tagline: "Et plantebasert flavonoid studert for immunstøtte under hard trening." } } },
+  { id: "dandelion", category: "health", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "Mild diuretic effect confirmed, but not much else", takeaway: "A small human trial found dandelion leaf extract produced a measurable, short-term increase in urine output, supporting its traditional use as a diuretic — but broader claims about liver/digestive support have far less direct human trial support.", tag: "Small Human Trial" }], goals: ["water balance", "digestion"], mechanism: "Traditionally used as a mild diuretic and digestive bitter; contains compounds studied for supporting liver enzyme activity, though human evidence is limited.", benefits: ["Mild diuretic effect", "Traditional digestive support use"], dosage: "500–2000 mg root/leaf extract daily", timing: "Morning, with a meal", cautions: "Diuretic effect means it can interact with blood pressure/lithium medications — check with a doctor if on diuretics.", i18n: { en: { name: "Dandelion", tagline: "A traditional mild diuretic and digestive herb." }, el: { name: "Πικραλίδα", tagline: "Παραδοσιακό ήπιο διουρητικό και πεπτικό βότανο.", goals: ["ισορροπία νερού", "πέψη"], mechanism: "Παραδοσιακά χρησιμοποιείται ως ήπιο διουρητικό και πικρό πεπτικό· περιέχει ενώσεις που ερευνώνται για στήριξη ηπατικής ενζυμικής δραστηριότητας.", benefits: ["Ήπια διουρητική δράση", "Παραδοσιακή χρήση για πεπτική στήριξη"], dosage: "500–2000 mg εκχυλίσματος ρίζας/φύλλου ημερησίως", timing: "Πρωί, με γεύμα", cautions: "Η διουρητική δράση σημαίνει πιθανή αλληλεπίδραση με φάρμακα πίεσης/λιθίου.", research: [{ headline: "Επιβεβαιωμένη ήπια διουρητική δράση, αλλά λίγα άλλα", takeaway: "Μια μικρή ανθρώπινη δοκιμή βρήκε μετρήσιμη, βραχυπρόθεσμη αύξηση παραγωγής ούρων από εκχύλισμα φύλλων πικραλίδας, υποστηρίζοντας την παραδοσιακή χρήση της ως διουρητικό.", tag: "Μικρή Ανθρώπινη Δοκιμή" }] }, es: { name: "Diente de León", tagline: "Una hierba tradicional diurética suave y digestiva." }, no: { name: "Løvetann", tagline: "En tradisjonell mild vanndrivende og fordøyelsesfremmende urt." } } },
+  { id: "synephrine", category: "performance", tags: ["stimulant"], timingSlot: "pre-workout", evidence: "Limited", research: [{ headline: "Small metabolic bump confirmed, but weaker than caffeine", takeaway: "Studies on bitter orange (synephrine) show a modest, short-term increase in metabolic rate and blood pressure, generally smaller in magnitude than caffeine's effect and often studied in combination with caffeine rather than alone.", tag: "Clinical Research" }], goals: ["fat loss", "energy"], mechanism: "A stimulant compound from bitter orange, structurally similar to ephedrine but weaker; activates beta-adrenergic receptors linked to fat mobilization and thermogenesis.", benefits: ["Modest thermogenic/metabolic boost", "Often combined with caffeine in fat-burner products"], dosage: "20–50 mg daily", timing: "30–60 minutes before training", cautions: "Can raise heart rate/blood pressure. Avoid combining with other stimulants or with cardiovascular conditions.", i18n: { en: { name: "Synephrine (Bitter Orange)", tagline: "A milder, legal alternative to ephedrine used in fat burners." }, el: { name: "Συνεφρίνη (Πικρό Πορτοκάλι)", tagline: "Ηπιότερη, νόμιμη εναλλακτική της εφεδρίνης σε προϊόντα λιπόλυσης.", goals: ["λιπόλυση", "ενέργεια"], mechanism: "Διεγερτική ένωση από το πικρό πορτοκάλι, δομικά παρόμοια με την εφεδρίνη αλλά ασθενέστερη· ενεργοποιεί βήτα-αδρενεργικούς υποδοχείς.", benefits: ["Μέτρια θερμογενετική/μεταβολική ώθηση", "Συχνά συνδυάζεται με καφεΐνη σε προϊόντα λιπόλυσης"], dosage: "20–50 mg ημερησίως", timing: "30–60 λεπτά πριν την προπόνηση", cautions: "Μπορεί να αυξήσει καρδιακό ρυθμό/πίεση. Αποφυγή συνδυασμού με άλλα διεγερτικά ή σε καρδιαγγειακά προβλήματα.", research: [{ headline: "Μικρή μεταβολική αύξηση επιβεβαιωμένη, αλλά ασθενέστερη από την καφεΐνη", takeaway: "Μελέτες στο πικρό πορτοκάλι (συνεφρίνη) δείχνουν μέτρια, βραχυπρόθεσμη αύξηση μεταβολικού ρυθμού και πίεσης, γενικά μικρότερη από την καφεΐνη.", tag: "Κλινική Έρευνα" }] }, es: { name: "Sinefrina (Naranja Amarga)", tagline: "Una alternativa más suave y legal a la efedrina usada en quemadores de grasa." }, no: { name: "Synefrin (Bitter Appelsin)", tagline: "Et mildere, lovlig alternativ til efedrin brukt i fettforbrennere." } } },
+  { id: "cla", category: "muscle", tags: [], timingSlot: "anytime", evidence: "Limited", research: [{ headline: "A large meta-analysis found only trivial fat loss", takeaway: "A meta-analysis of 18 randomized trials found CLA supplementation produced a statistically significant but practically tiny fat loss of about 0.05kg/week, with effects plateauing after the first month.", tag: "Meta-Analysis" }], goals: ["body composition"], mechanism: "A group of fatty acid isomers found naturally in beef/dairy, studied for possible effects on fat cell metabolism, though the mechanism in humans remains unclear.", benefits: ["Very small documented fat-loss effect", "Popular but overstated in marketing"], dosage: "3.2–6 g daily", timing: "With meals, split into 2-3 doses", cautions: "Effect size is small enough that most people won't notice a real difference.", i18n: { en: { name: "CLA (Conjugated Linoleic Acid)", tagline: "A popular fat-loss aid with a real but very small measured effect." }, el: { name: "CLA (Συζευγμένο Λινολεϊκό Οξύ)", tagline: "Δημοφιλές βοήθημα λιπόλυσης με πραγματικό αλλά πολύ μικρό μετρημένο όφελος.", goals: ["σύσταση σώματος"], mechanism: "Ομάδα ισομερών λιπαρών οξέων που βρίσκονται φυσικά σε βοδινό/γαλακτοκομικά, ερευνώνται για πιθανή επίδραση στον μεταβολισμό λιποκυττάρων.", benefits: ["Πολύ μικρό τεκμηριωμένο όφελος λιπόλυσης", "Δημοφιλές αλλά υπερεκτιμημένο στο μάρκετινγκ"], dosage: "3.2–6 g ημερησίως", timing: "Με γεύματα, σε 2-3 δόσεις", cautions: "Το μέγεθος επίδρασης είναι αρκετά μικρό ώστε οι περισσότεροι να μην το παρατηρήσουν στην πράξη.", research: [{ headline: "Μεγάλη μετα-ανάλυση βρήκε μόνο ασήμαντη απώλεια λίπους", takeaway: "Μια μετα-ανάλυση 18 τυχαιοποιημένων δοκιμών βρήκε στατιστικά σημαντική αλλά πρακτικά αμελητέα απώλεια λίπους περίπου 0.05kg/εβδομάδα, με τα αποτελέσματα να σταθεροποιούνται μετά τον πρώτο μήνα.", tag: "Μετα-ανάλυση" }] }, es: { name: "CLA (Ácido Linoleico Conjugado)", tagline: "Una ayuda popular para perder grasa con un efecto real pero muy pequeño." }, no: { name: "CLA (Konjugert Linolsyre)", tagline: "Et populært fettforbrenningsmiddel med en reell, men svært liten effekt." } } },
+  { id: "garcinia-cambogia", category: "health", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "Meta-analysis found only marginal weight loss, and safety flags followed", takeaway: "A meta-analysis of randomized trials found Garcinia cambogia (hydroxycitric acid) produced only marginally more weight loss than placebo, while case reports of liver toxicity led several countries to restrict high-dose products.", tag: "Meta-Analysis & Safety Reports" }], goals: ["fat loss"], mechanism: "Contains hydroxycitric acid (HCA), theorized to inhibit an enzyme involved in fat synthesis and suppress appetite, though human results are inconsistent.", benefits: ["Marketed for appetite suppression and fat loss", "Effect size is marginal at best in trials"], dosage: "500–1000 mg (as HCA) before meals", timing: "30–60 minutes before meals", cautions: "Case reports of liver toxicity at high doses — avoid with existing liver conditions.", i18n: { en: { name: "Garcinia Cambogia", tagline: "A once-hyped fat-loss fruit extract with marginal real-world benefit." }, el: { name: "Garcinia Cambogia", tagline: "Κάποτε διαφημισμένο φρουτικό εκχύλισμα λιπόλυσης με οριακό πραγματικό όφελος.", goals: ["λιπόλυση"], mechanism: "Περιέχει υδροξυκιτρικό οξύ (HCA), θεωρητικά αναστέλλει ένζυμο εμπλεκόμενο στη λιπογένεση και καταστέλλει την όρεξη, αν και τα ανθρώπινα αποτελέσματα είναι ασυνεπή.", benefits: ["Διαφημίζεται για καταστολή όρεξης και λιπόλυση", "Οριακό όφελος στις δοκιμές"], dosage: "500–1000 mg (ως HCA) πριν τα γεύματα", timing: "30–60 λεπτά πριν τα γεύματα", cautions: "Αναφορές ηπατοτοξικότητας σε υψηλές δόσεις — αποφυγή σε υπάρχοντα ηπατικά προβλήματα.", research: [{ headline: "Μετα-ανάλυση βρήκε μόνο οριακή απώλεια βάρους, και ακολούθησαν προειδοποιήσεις ασφάλειας", takeaway: "Μια μετα-ανάλυση τυχαιοποιημένων δοκιμών βρήκε ότι το Garcinia cambogia (υδροξυκιτρικό οξύ) παρήγαγε μόνο οριακά μεγαλύτερη απώλεια βάρους από το εικονικό φάρμακο, ενώ αναφορές ηπατοτοξικότητας οδήγησαν σε περιορισμούς.", tag: "Μετα-ανάλυση & Αναφορές Ασφάλειας" }] }, es: { name: "Garcinia Cambogia", tagline: "Un extracto de fruta para pérdida de grasa antes muy popular, con beneficio real marginal." }, no: { name: "Garcinia Cambogia", tagline: "Et tidligere hypet fruktekstrakt for fettforbrenning med marginal reell effekt." } } },
+  { id: "beef-protein", category: "muscle", tags: [], timingSlot: "post-workout", evidence: "Moderate", research: [{ headline: "A head-to-head trial found comparable muscle results to whey", takeaway: "A randomized controlled trial comparing beef protein isolate to whey protein isolate over 8 weeks of resistance training found no significant difference in muscle mass or strength gains between the two.", tag: "Randomized Controlled Trial" }], goals: ["muscle mass", "recovery"], mechanism: "A hydrolyzed, dairy-free complete protein isolated from beef, containing a full essential amino acid profile comparable to whey.", benefits: ["Dairy-free complete protein alternative", "Comparable muscle-building results to whey in trials"], dosage: "20–40 g per serving", timing: "Post-workout, or any protein gap", cautions: "Good option for dairy-intolerant individuals who want a whey alternative.", i18n: { en: { name: "Beef Protein Isolate", tagline: "A dairy-free complete protein with muscle-building results comparable to whey." }, el: { name: "Απομονωμένη Πρωτεΐνη Βοδινού", tagline: "Πλήρης πρωτεΐνη χωρίς γαλακτοκομικά, με αποτελέσματα συγκρίσιμα με τη whey.", goals: ["μυϊκή μάζα", "ανάρρωση"], mechanism: "Υδρολυμένη, χωρίς γαλακτοκομικά πλήρης πρωτεΐνη από βοδινό, με πλήρες προφίλ απαραίτητων αμινοξέων συγκρίσιμο με την whey.", benefits: ["Εναλλακτική πλήρης πρωτεΐνη χωρίς γαλακτοκομικά", "Συγκρίσιμα αποτελέσματα μυϊκής ανάπτυξης με τη whey σε δοκιμές"], dosage: "20–40 g ανά μερίδα", timing: "Μετά την προπόνηση, ή σε οποιοδήποτε κενό πρωτεΐνης", cautions: "Καλή επιλογή για άτομα με δυσανεξία γαλακτοκομικών που θέλουν εναλλακτική της whey.", research: [{ headline: "Άμεση σύγκριση βρήκε παρόμοια αποτελέσματα με την whey", takeaway: "Μια τυχαιοποιημένη ελεγχόμενη δοκιμή σύγκρισης πρωτεΐνης βοδινού με whey σε 8 εβδομάδες προπόνησης αντιστάσεων δεν βρήκε σημαντική διαφορά σε μυϊκή μάζα ή δύναμη.", tag: "Τυχαιοποιημένη Ελεγχόμενη Δοκιμή" }] }, es: { name: "Aislado de Proteína de Res", tagline: "Una proteína completa sin lácteos con resultados comparables a la del suero." }, no: { name: "Biffprotein Isolat", tagline: "Et melkefritt komplett protein med muskelbyggende resultater som ligner myse." } } },
+  { id: "pea-protein", category: "muscle", tags: [], timingSlot: "post-workout", evidence: "Moderate", research: [{ headline: "A landmark 12-week trial found comparable muscle thickness gains to whey", takeaway: "A randomized trial in resistance-trained men found pea protein produced increases in bicep muscle thickness statistically indistinguishable from whey protein over 12 weeks of training.", tag: "Randomized Trial" }], goals: ["muscle mass", "recovery"], mechanism: "A vegan, allergen-friendly protein source rich in BCAAs (though lower in methionine than animal proteins), often paired with rice protein to complete the amino acid profile.", benefits: ["Vegan-friendly complete-enough protein", "Comparable muscle-building results to whey in trials", "Hypoallergenic — good for dairy/soy sensitivities"], dosage: "20–30 g per serving", timing: "Post-workout, or any protein gap", cautions: "Slightly gritty texture compared to whey; often blended with other plant proteins.", i18n: { en: { name: "Pea Protein", tagline: "A vegan protein with muscle-building results on par with whey." }, el: { name: "Πρωτεΐνη Μπιζελιού", tagline: "Vegan πρωτεΐνη με αποτελέσματα μυϊκής ανάπτυξης αντίστοιχα με τη whey.", goals: ["μυϊκή μάζα", "ανάρρωση"], mechanism: "Vegan πρωτεΐνη φιλική σε αλλεργικούς, πλούσια σε BCAA (αν και χαμηλότερη σε μεθειονίνη από τις ζωικές), συχνά συνδυάζεται με ρυζοπρωτεΐνη για πλήρες προφίλ.", benefits: ["Vegan πρωτεΐνη επαρκούς προφίλ", "Συγκρίσιμα αποτελέσματα μυϊκής ανάπτυξης με τη whey σε δοκιμές", "Υποαλλεργική — καλή για ευαισθησίες γαλακτοκομικών/σόγιας"], dosage: "20–30 g ανά μερίδα", timing: "Μετά την προπόνηση, ή σε οποιοδήποτε κενό πρωτεΐνης", cautions: "Ελαφρώς πιο τραχιά υφή σε σχέση με τη whey· συχνά αναμειγνύεται με άλλες φυτικές πρωτεΐνες.", research: [{ headline: "Βασική δοκιμή 12 εβδομάδων βρήκε συγκρίσιμα κέρδη μυϊκού πάχους με τη whey", takeaway: "Μια τυχαιοποιημένη δοκιμή σε προπονημένους άνδρες βρήκε ότι η πρωτεΐνη μπιζελιού παρήγαγε αύξηση πάχους δικεφάλου στατιστικά αδιάκριτη από τη whey σε 12 εβδομάδες.", tag: "Τυχαιοποιημένη Δοκιμή" }] }, es: { name: "Proteína de Guisante", tagline: "Una proteína vegana con resultados de crecimiento muscular a la par del suero." }, no: { name: "Erteprotein", tagline: "Et vegansk protein med muskelbyggende resultater på nivå med myse." } } },
+  { id: "hemp-protein", category: "muscle", tags: [], timingSlot: "anytime", evidence: "Limited", research: [{ headline: "Lower protein density and an incomplete amino acid profile vs. other plant proteins", takeaway: "Hemp protein powder is typically only 50% protein by weight (vs. 80%+ for whey/pea isolates) and runs low in lysine, meaning larger servings or pairing with other proteins is needed to match muscle-building doses.", tag: "Nutrient Composition Analysis" }], goals: ["muscle mass", "fiber intake"], mechanism: "A plant protein from hemp seeds that also delivers fiber and omega-3/omega-6 fats, but with lower protein density and a less complete amino acid profile than whey, pea, or beef protein.", benefits: ["Adds fiber and healthy fats alongside protein", "Vegan and allergen-friendly"], dosage: "30–40 g per serving (to hit ~20g protein)", timing: "Any time — best paired with another protein source", cautions: "Not a complete standalone protein for muscle-building goals — pair with a complementary source.", i18n: { en: { name: "Hemp Protein", tagline: "A fiber-rich plant protein, best paired with another protein source." }, el: { name: "Πρωτεΐνη Κάνναβης", tagline: "Φυτική πρωτεΐνη πλούσια σε φυτικές ίνες, καλύτερα σε συνδυασμό με άλλη πηγή.", goals: ["μυϊκή μάζα", "πρόσληψη φυτικών ινών"], mechanism: "Φυτική πρωτεΐνη από σπόρους κάνναβης που παρέχει και φυτικές ίνες και ωμέγα-3/6 λιπαρά, αλλά με χαμηλότερη πυκνότητα πρωτεΐνης και λιγότερο πλήρες προφίλ αμινοξέων.", benefits: ["Προσθέτει φυτικές ίνες και υγιή λιπαρά μαζί με πρωτεΐνη", "Vegan και φιλική σε αλλεργικούς"], dosage: "30–40 g ανά μερίδα (για ~20g πρωτεΐνη)", timing: "Οποιαδήποτε ώρα — καλύτερα σε συνδυασμό με άλλη πηγή πρωτεΐνης", cautions: "Δεν είναι πλήρης αυτόνομη πρωτεΐνη για στόχους μυϊκής ανάπτυξης — συνδύασέ την με συμπληρωματική πηγή.", research: [{ headline: "Χαμηλότερη πυκνότητα πρωτεΐνης και ελλιπές προφίλ αμινοξέων έναντι άλλων φυτικών πρωτεϊνών", takeaway: "Η σκόνη πρωτεΐνης κάνναβης είναι συνήθως μόλις 50% πρωτεΐνη κατά βάρος (έναντι 80%+ για whey/μπιζέλι) και χαμηλή σε λυσίνη.", tag: "Ανάλυση Σύνθεσης Θρεπτικών" }] }, es: { name: "Proteína de Cáñamo", tagline: "Una proteína vegetal rica en fibra, mejor combinada con otra fuente de proteína." }, no: { name: "Hampeprotein", tagline: "Et fiberrikt planteprotein, best kombinert med en annen proteinkilde." } } },
+  { id: "casein", category: "recovery", tags: [], timingSlot: "evening", evidence: "Moderate", research: [{ headline: "Classic overnight study found it sustains protein synthesis for hours", takeaway: "The landmark Boirie et al. study found casein's slow digestion produced a gradual, sustained rise in blood amino acids over several hours — compared to whey's fast spike-and-drop pattern — making it well suited for overnight recovery.", tag: "Foundational Study (Boirie)" }], goals: ["muscle mass", "recovery", "overnight"], mechanism: "A slow-digesting milk protein that forms a gel in the stomach, releasing amino acids gradually over several hours — ideal for extended gaps like overnight sleep.", benefits: ["Sustained amino acid release overnight", "Supports muscle protein synthesis during sleep"], dosage: "20–40 g before bed", timing: "30–60 minutes before sleep", cautions: "Same lactose-intolerance considerations as whey; micellar casein digests slower than casein isolate/hydrolysate.", i18n: { en: { name: "Casein", tagline: "A slow-digesting milk protein ideal for overnight muscle recovery." }, el: { name: "Καζεΐνη", tagline: "Αργά χωνευόμενη πρωτεΐνη γάλακτος, ιδανική για νυχτερινή μυϊκή ανάρρωση.", goals: ["μυϊκή μάζα", "ανάρρωση", "διανυκτέρευση"], mechanism: "Αργά χωνευόμενη πρωτεΐνη γάλακτος που σχηματίζει γέλη στο στομάχι, απελευθερώνοντας αμινοξέα σταδιακά για αρκετές ώρες — ιδανική για κενά όπως ο ύπνος.", benefits: ["Παρατεταμένη απελευθέρωση αμινοξέων κατά τη διάρκεια της νύχτας", "Στηρίζει τη μυϊκή πρωτεϊνοσύνθεση κατά τον ύπνο"], dosage: "20–40 g πριν τον ύπνο", timing: "30–60 λεπτά πριν τον ύπνο", cautions: "Ίδιες παρατηρήσεις δυσανεξίας λακτόζης με τη whey· η μικυλλιακή καζεΐνη χωνεύεται πιο αργά από το isolate/hydrolysate.", research: [{ headline: "Κλασική μελέτη βρήκε ότι στηρίζει την πρωτεϊνοσύνθεση για ώρες", takeaway: "Η θεμελιώδης μελέτη των Boirie et al. βρήκε ότι η αργή πέψη της καζεΐνης παράγει σταδιακή, παρατεταμένη άνοδο αμινοξέων στο αίμα για αρκετές ώρες — σε αντίθεση με την ταχεία αιχμή της whey.", tag: "Θεμελιώδης Μελέτη (Boirie)" }] }, es: { name: "Caseína", tagline: "Una proteína de leche de digestión lenta ideal para la recuperación muscular nocturna." }, no: { name: "Kasein", tagline: "Et sakte-fordøyelig melkeprotein ideelt for muskelgjenoppretting over natten." } } },
+  { id: "d-aspartic-acid", category: "muscle", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "Early positive trial hasn't held up in trained athletes", takeaway: "An initial 2009 study found DAA raised testosterone in untrained men, but subsequent trials in resistance-trained athletes found no significant testosterone or strength benefit — and one found levels actually declined with prolonged use.", tag: "Conflicting Trial Evidence" }], goals: ["testosterone support"], mechanism: "An amino acid involved in the release of luteinizing hormone, theorized to stimulate testosterone production, though effects appear inconsistent and don't replicate well in trained populations.", benefits: ["Marketed as a natural testosterone booster", "Evidence in trained individuals is weak/inconsistent"], dosage: "3 g daily", timing: "Morning", cautions: "Don't expect a testosterone boost if you're already a trained athlete — evidence mostly fails to replicate here.", i18n: { en: { name: "D-Aspartic Acid (DAA)", tagline: "A popular 'test booster' with evidence that mostly fails to hold up in trained athletes." }, el: { name: "D-Ασπαρτικό Οξύ (DAA)", tagline: "Δημοφιλής 'ενισχυτής τεστοστερόνης' με στοιχεία που συνήθως δεν επιβεβαιώνονται σε προπονημένους.", goals: ["στήριξη τεστοστερόνης"], mechanism: "Αμινοξύ εμπλεκόμενο στην απελευθέρωση ωχρινοτρόπου ορμόνης, θεωρητικά διεγείρει την παραγωγή τεστοστερόνης, αλλά τα αποτελέσματα φαίνονται ασυνεπή σε προπονημένους.", benefits: ["Διαφημίζεται ως φυσικός ενισχυτής τεστοστερόνης", "Ασθενή/ασυνεπή στοιχεία σε προπονημένα άτομα"], dosage: "3 g ημερησίως", timing: "Πρωί", cautions: "Μην περιμένεις αύξηση τεστοστερόνης αν είσαι ήδη προπονημένος αθλητής — τα στοιχεία συνήθως δεν επιβεβαιώνονται.", research: [{ headline: "Αρχική θετική δοκιμή δεν επιβεβαιώθηκε σε προπονημένους αθλητές", takeaway: "Μια αρχική μελέτη του 2009 βρήκε αύξηση τεστοστερόνης σε μη προπονημένους άνδρες, αλλά επόμενες δοκιμές σε προπονημένους αθλητές δεν βρήκαν σημαντικό όφελος — μία μάλιστα βρήκε μείωση με παρατεταμένη χρήση.", tag: "Αντικρουόμενα Στοιχεία Δοκιμών" }] }, es: { name: "Ácido D-Aspártico (DAA)", tagline: "Un popular 'potenciador de testosterona' cuya evidencia no se sostiene en atletas entrenados." }, no: { name: "D-Asparaginsyre (DAA)", tagline: "En populær 'testosteronbooster' hvor bevisene stort sett ikke holder for trente utøvere." } } },
+  { id: "glucosamine-chondroitin", category: "recovery", tags: [], timingSlot: "anytime", evidence: "Moderate", research: [{ headline: "The largest NIH trial found benefit only in moderate-to-severe cases", takeaway: "The GAIT trial, the largest NIH-funded study of its kind, found glucosamine/chondroitin combined performed no better than placebo for mild knee osteoarthritis overall, but showed a significant benefit in the subgroup with moderate-to-severe pain.", tag: "Landmark Trial (GAIT)" }], goals: ["joint health"], mechanism: "Building blocks of cartilage — glucosamine supports cartilage matrix formation while chondroitin helps retain water in cartilage tissue for cushioning.", benefits: ["May help moderate-to-severe joint pain", "Long track record of use for joint health"], dosage: "1500 mg glucosamine + 1200 mg chondroitin daily", timing: "With a meal", cautions: "Shellfish-derived glucosamine — check for allergy. Effects take 4-8+ weeks to become noticeable.", i18n: { en: { name: "Glucosamine & Chondroitin", tagline: "Classic joint-support supplements, most helpful for moderate-to-severe pain." }, el: { name: "Γλυκοζαμίνη & Χονδροϊτίνη", tagline: "Κλασικά συμπληρώματα αρθρικής στήριξης, πιο χρήσιμα σε μέτριο-σοβαρό πόνο.", goals: ["αρθρική υγεία"], mechanism: "Δομικά στοιχεία του χόνδρου — η γλυκοζαμίνη στηρίζει τον σχηματισμό χόνδρινης μήτρας ενώ η χονδροϊτίνη βοηθά στη συγκράτηση νερού στον χόνδρο.", benefits: ["Πιθανή βοήθεια σε μέτριο-σοβαρό αρθρικό πόνο", "Μακρά ιστορία χρήσης για αρθρική υγεία"], dosage: "1500 mg γλυκοζαμίνη + 1200 mg χονδροϊτίνη ημερησίως", timing: "Με γεύμα", cautions: "Η γλυκοζαμίνη συχνά προέρχεται από οστρακοειδή — έλεγχος αλλεργίας. Τα αποτελέσματα χρειάζονται 4-8+ εβδομάδες.", research: [{ headline: "Η μεγαλύτερη δοκιμή NIH βρήκε όφελος μόνο σε μέτριες-σοβαρές περιπτώσεις", takeaway: "Η δοκιμή GAIT, η μεγαλύτερη χρηματοδοτούμενη από NIH στο είδος της, βρήκε ότι ο συνδυασμός γλυκοζαμίνης/χονδροϊτίνης δεν ήταν καλύτερος από το εικονικό φάρμακο σε ήπια οστεοαρθρίτιδα γόνατος συνολικά, αλλά έδειξε σημαντικό όφελος στην υποομάδα με μέτριο-σοβαρό πόνο.", tag: "Βασική Δοκιμή (GAIT)" }] }, es: { name: "Glucosamina y Condroitina", tagline: "Suplementos clásicos de apoyo articular, más útiles para dolor de moderado a severo." }, no: { name: "Glukosamin og Kondroitin", tagline: "Klassiske leddstøttende tilskudd, mest nyttige for moderat til alvorlig smerte." } } },
+  { id: "msm", category: "recovery", tags: [], timingSlot: "anytime", evidence: "Limited", research: [{ headline: "Small trials show reduced pain and stiffness in arthritis", takeaway: "Several small randomized trials found MSM (methylsulfonylmethane) supplementation modestly reduced pain and improved physical function scores in people with knee osteoarthritis over 8-12 weeks compared to placebo.", tag: "Small Randomized Trials" }], goals: ["joint health", "inflammation"], mechanism: "A naturally occurring sulfur compound studied for anti-inflammatory effects and as a building block for connective tissue.", benefits: ["Studied for joint pain/stiffness relief", "Often paired with glucosamine/chondroitin"], dosage: "1500–3000 mg daily", timing: "With meals, split into 2 doses", cautions: "Generally well tolerated; mild GI upset possible at high doses.", i18n: { en: { name: "MSM (Methylsulfonylmethane)", tagline: "A sulfur compound studied for joint pain and connective tissue support." }, el: { name: "MSM (Μεθυλοσουλφονυλομεθάνιο)", tagline: "Ένωση θείου που ερευνάται για αρθρικό πόνο και στήριξη συνδετικού ιστού.", goals: ["αρθρική υγεία", "φλεγμονή"], mechanism: "Φυσική ένωση θείου που ερευνάται για αντιφλεγμονώδη δράση και ως δομικό στοιχείο συνδετικού ιστού.", benefits: ["Ερευνάται για ανακούφιση αρθρικού πόνου/δυσκαμψίας", "Συχνά συνδυάζεται με γλυκοζαμίνη/χονδροϊτίνη"], dosage: "1500–3000 mg ημερησίως", timing: "Με γεύματα, σε 2 δόσεις", cautions: "Γενικά καλά ανεκτό· πιθανή ήπια γαστρεντερική δυσφορία σε υψηλές δόσεις.", research: [{ headline: "Μικρές δοκιμές δείχνουν μειωμένο πόνο και δυσκαμψία σε αρθρίτιδα", takeaway: "Αρκετές μικρές τυχαιοποιημένες δοκιμές βρήκαν ότι το MSM μείωσε μέτρια τον πόνο και βελτίωσε τη λειτουργικότητα σε άτομα με οστεοαρθρίτιδα γόνατος.", tag: "Μικρές Τυχαιοποιημένες Δοκιμές" }] }, es: { name: "MSM (Metilsulfonilmetano)", tagline: "Un compuesto de azufre estudiado por su apoyo al dolor articular y al tejido conectivo." }, no: { name: "MSM (Metylsulfonylmetan)", tagline: "En svovelforbindelse studert for leddsmerter og støtte til bindevev." } } },
+  { id: "proline", category: "recovery", tags: [], timingSlot: "anytime", evidence: "Limited", research: [{ headline: "A structural building block, not a standalone performance supplement", takeaway: "Proline (and hydroxyproline) makes up roughly 25% of collagen's amino acid content; research on proline mostly studies it as part of collagen supplementation rather than as an isolated ingredient with its own trial base.", tag: "Nutrient Composition Research" }], goals: ["joints", "skin", "connective tissue"], mechanism: "A non-essential amino acid that's a major structural component of collagen, involved in wound healing and connective tissue repair.", benefits: ["Structural component of collagen", "Supports connective tissue repair"], dosage: "Usually obtained via collagen (10-15g) rather than isolated proline", timing: "With a meal", cautions: "Rarely supplemented alone — most people get it as part of a collagen or complete protein source.", i18n: { en: { name: "Proline", tagline: "A key building block of collagen, usually taken as part of a collagen supplement." }, el: { name: "Προλίνη", tagline: "Βασικό δομικό στοιχείο του κολλαγόνου, συνήθως λαμβάνεται μέσω συμπληρώματος κολλαγόνου.", goals: ["αρθρώσεις", "δέρμα", "συνδετικός ιστός"], mechanism: "Μη απαραίτητο αμινοξύ που αποτελεί βασικό δομικό συστατικό του κολλαγόνου, εμπλέκεται στην επούλωση πληγών και επιδιόρθωση συνδετικού ιστού.", benefits: ["Δομικό συστατικό του κολλαγόνου", "Στηρίζει την επιδιόρθωση συνδετικού ιστού"], dosage: "Συνήθως λαμβάνεται μέσω κολλαγόνου (10-15g) αντί μεμονωμένης προλίνης", timing: "Με γεύμα", cautions: "Σπάνια λαμβάνεται μεμονωμένα — οι περισσότεροι τη λαμβάνουν μέσω κολλαγόνου ή πλήρους πρωτεΐνης.", research: [{ headline: "Δομικό στοιχείο, όχι αυτόνομο συμπλήρωμα απόδοσης", takeaway: "Η προλίνη (και υδροξυπρολίνη) αποτελεί περίπου το 25% του αμινοξικού περιεχομένου του κολλαγόνου· η έρευνα τη μελετά κυρίως ως μέρος της συμπλήρωσης κολλαγόνου.", tag: "Έρευνα Σύνθεσης Θρεπτικών" }] }, es: { name: "Prolina", tagline: "Un componente clave del colágeno, normalmente tomado como parte de un suplemento de colágeno." }, no: { name: "Prolin", tagline: "En nøkkelbyggestein i kollagen, vanligvis tatt som del av et kollagentilskudd." } } },
+  { id: "eaa", category: "recovery", tags: [], timingSlot: "pre-workout", evidence: "Moderate", research: [{ headline: "Includes all 9 essential amino acids — a step up from BCAA alone", takeaway: "Unlike BCAA (just 3 amino acids), EAA supplements provide all 9 essential amino acids the body can't produce, and studies find EAA supplementation stimulates muscle protein synthesis more effectively than BCAA alone.", tag: "Comparative Research" }], goals: ["muscle mass", "recovery"], mechanism: "Provides all 9 essential amino acids the body cannot synthesize on its own — a more complete stimulus for muscle protein synthesis than BCAA alone.", benefits: ["More complete muscle-building stimulus than BCAA", "Useful for fasted training or low-protein meals"], dosage: "10–15 g per serving", timing: "Around training", cautions: "Redundant if daily protein intake from complete sources is already sufficient.", i18n: { en: { name: "EAA (Essential Amino Acids)", tagline: "All 9 essential amino acids — a more complete alternative to BCAA." }, el: { name: "EAA (Απαραίτητα Αμινοξέα)", tagline: "Και τα 9 απαραίτητα αμινοξέα — πληρέστερη εναλλακτική του BCAA.", goals: ["μυϊκή μάζα", "ανάρρωση"], mechanism: "Παρέχει και τα 9 απαραίτητα αμινοξέα που το σώμα δεν μπορεί να συνθέσει μόνο του — πιο πλήρες ερέθισμα πρωτεϊνοσύνθεσης από το BCAA μόνο.", benefits: ["Πληρέστερο ερέθισμα μυϊκής ανάπτυξης από το BCAA", "Χρήσιμο για προπόνηση νηστείας ή γεύματα χαμηλής πρωτεΐνης"], dosage: "10–15 g ανά μερίδα", timing: "Γύρω από την προπόνηση", cautions: "Περιττό αν η ημερήσια πρωτεΐνη από πλήρεις πηγές είναι ήδη επαρκής.", research: [{ headline: "Περιλαμβάνει όλα τα 9 απαραίτητα αμινοξέα — ανώτερο από το BCAA μόνο", takeaway: "Σε αντίθεση με το BCAA (μόνο 3 αμινοξέα), τα συμπληρώματα EAA παρέχουν και τα 9 απαραίτητα αμινοξέα, και οι μελέτες δείχνουν καλύτερη διέγερση πρωτεϊνοσύνθεσης από το BCAA μόνο.", tag: "Συγκριτική Έρευνα" }] }, es: { name: "EAA (Aminoácidos Esenciales)", tagline: "Los 9 aminoácidos esenciales — una alternativa más completa al BCAA." }, no: { name: "EAA (Essensielle Aminosyrer)", tagline: "Alle 9 essensielle aminosyrer — et mer komplett alternativ til BCAA." } } },
+  { id: "cissus-quadrangularis", category: "recovery", tags: [], timingSlot: "anytime", evidence: "Limited", research: [{ headline: "Traditional bone-healing plant studied for joint support in athletes", takeaway: "A study in athletes with joint pain found Cissus quadrangularis extract reduced joint discomfort over 8 weeks; separate research on bone fracture healing (its traditional Ayurvedic use) shows accelerated healing markers in animal models.", tag: "Clinical & Traditional Use Research" }], goals: ["joint health", "bone health"], mechanism: "A traditional Ayurvedic plant used for bone/fracture healing, studied more recently for joint pain relief in active/athletic populations.", benefits: ["Studied for joint pain relief in athletes", "Traditional use for bone healing"], dosage: "500–1000 mg extract daily", timing: "With a meal", cautions: "Human clinical data is still limited in volume; quality varies by supplier.", i18n: { en: { name: "Cissus Quadrangularis", tagline: "A traditional Ayurvedic plant studied for joint and bone support." }, el: { name: "Cissus Quadrangularis", tagline: "Παραδοσιακό φυτό Ayurveda που ερευνάται για αρθρική και οστική στήριξη.", goals: ["αρθρική υγεία", "οστική υγεία"], mechanism: "Παραδοσιακό φυτό Ayurveda για επούλωση οστών/καταγμάτων, μελετάται πιο πρόσφατα για ανακούφιση αρθρικού πόνου σε αθλητικούς πληθυσμούς.", benefits: ["Ερευνάται για ανακούφιση αρθρικού πόνου σε αθλητές", "Παραδοσιακή χρήση για επούλωση οστών"], dosage: "500–1000 mg εκχυλίσματος ημερησίως", timing: "Με γεύμα", cautions: "Τα ανθρώπινα κλινικά δεδομένα παραμένουν περιορισμένα σε όγκο· η ποιότητα ποικίλλει ανά προμηθευτή.", research: [{ headline: "Παραδοσιακό φυτό επούλωσης οστών, ερευνάται για αρθρική στήριξη σε αθλητές", takeaway: "Μια μελέτη σε αθλητές με αρθρικό πόνο βρήκε ότι το εκχύλισμα Cissus quadrangularis μείωσε τη δυσφορία αρθρώσεων σε 8 εβδομάδες.", tag: "Κλινική & Παραδοσιακή Έρευνα Χρήσης" }] }, es: { name: "Cissus Quadrangularis", tagline: "Una planta ayurvédica tradicional estudiada por su apoyo articular y óseo." }, no: { name: "Cissus Quadrangularis", tagline: "En tradisjonell ayurvedisk plante studert for ledd- og benstøtte." } } },
+  { id: "urtica-dioica", category: "health", tags: [], timingSlot: "morning", evidence: "Limited", research: [{ headline: "Nettle root extract studied mainly for prostate health, not fitness", takeaway: "Clinical research on Urtica dioica (stinging nettle) root focuses heavily on benign prostatic hyperplasia (BPH) symptom relief in older men, with weaker and more limited evidence for its marketed 'free testosterone' fitness claims.", tag: "Clinical Research Focus" }], goals: ["prostate health", "hormone balance"], mechanism: "Root extract studied for binding to sex hormone-binding globulin (SHBG) and supporting prostate/urinary comfort, primarily researched in older men rather than athletes.", benefits: ["Studied for prostate/urinary symptom relief in older men", "Marketed but weakly evidenced for 'free testosterone' claims"], dosage: "300–600 mg root extract daily", timing: "Morning, with a meal", cautions: "Fitness/testosterone marketing claims outpace the actual evidence, which is mostly about prostate health in older men.", i18n: { en: { name: "Urtica Dioica (Nettle Root)", tagline: "A traditional root extract mainly studied for prostate health in older men." }, el: { name: "Urtica Dioica (Ρίζα Τσουκνίδας)", tagline: "Παραδοσιακό εκχύλισμα ρίζας που μελετάται κυρίως για προστατική υγεία σε μεγαλύτερους άνδρες.", goals: ["προστατική υγεία", "ορμονική ισορροπία"], mechanism: "Εκχύλισμα ρίζας που ερευνάται για δέσμευση στην SHBG και στήριξη προστάτη/ουροποιητικού, κυρίως σε μεγαλύτερους άνδρες παρά σε αθλητές.", benefits: ["Ερευνάται για ανακούφιση προστατικών/ουρολογικών συμπτωμάτων σε μεγαλύτερους άνδρες", "Διαφημίζεται αλλά ασθενώς τεκμηριωμένο για ισχυρισμούς 'ελεύθερης τεστοστερόνης'"], dosage: "300–600 mg εκχυλίσματος ρίζας ημερησίως", timing: "Πρωί, με γεύμα", cautions: "Οι ισχυρισμοί μάρκετινγκ για φυσική κατάσταση/τεστοστερόνη ξεπερνούν τα πραγματικά στοιχεία, που αφορούν κυρίως προστατική υγεία σε μεγαλύτερους άνδρες.", research: [{ headline: "Το εκχύλισμα ρίζας τσουκνίδας ερευνάται κυρίως για προστατική υγεία, όχι φυσική κατάσταση", takeaway: "Η κλινική έρευνα στο Urtica dioica (τσουκνίδα) εστιάζει κυρίως στην ανακούφιση συμπτωμάτων καλοήθους υπερπλασίας προστάτη σε μεγαλύτερους άνδρες.", tag: "Εστίαση Κλινικής Έρευνας" }] }, es: { name: "Urtica Dioica (Raíz de Ortiga)", tagline: "Un extracto de raíz tradicional estudiado principalmente por la salud prostática en hombres mayores." }, no: { name: "Urtica Dioica (Brenneslerot)", tagline: "Et tradisjonelt rotekstrakt hovedsakelig studert for prostatahelse hos eldre menn." } } },
+  { id: "magnesium-forms", category: "sleep", tags: ["calming"], timingSlot: "evening", evidence: "Moderate", research: [{ headline: "Absorption and use vary meaningfully by form", takeaway: "Comparative research finds magnesium glycinate/citrate are better absorbed and gentler on the gut than magnesium oxide (which is poorly absorbed but cheap), while magnesium threonate is specifically studied for crossing into brain tissue.", tag: "Comparative Bioavailability Research" }], goals: ["sleep", "absorption"], mechanism: "Different magnesium salts (glycinate, citrate, oxide, malate, threonate) bind magnesium to different carrier molecules, changing absorption rate, GI tolerance, and in threonate's case, ability to cross the blood-brain barrier.", benefits: ["Glycinate/citrate: better absorbed, gentler on gut", "Oxide: cheap but poorly absorbed, more laxative effect", "Threonate: studied for cognitive/brain applications"], dosage: "200–400 mg elemental magnesium (form-dependent)", timing: "Evening, 30–60 minutes before bed", cautions: "Check 'elemental magnesium' content on the label — total compound weight overstates the actual mineral dose.", i18n: { en: { name: "Magnesium Forms (Glycinate, Citrate, Oxide, Threonate)", tagline: "Not all magnesium is equal — the form changes absorption and effect." }, el: { name: "Μορφές Μαγνησίου (Γλυκινικό, Κιτρικό, Οξείδιο, Threonate)", tagline: "Δεν είναι όλο το μαγνήσιο ίδιο — η μορφή αλλάζει απορρόφηση και αποτέλεσμα.", goals: ["ύπνος", "απορρόφηση"], mechanism: "Διαφορετικά άλατα μαγνησίου (γλυκινικό, κιτρικό, οξείδιο, μηλικό, threonate) δεσμεύουν το μαγνήσιο σε διαφορετικά μόρια-φορείς, αλλάζοντας ρυθμό απορρόφησης, γαστρεντερική ανοχή, και στην περίπτωση του threonate, ικανότητα διέλευσης στον εγκέφαλο.", benefits: ["Γλυκινικό/κιτρικό: καλύτερη απορρόφηση, πιο ήπιο στο έντερο", "Οξείδιο: φθηνό αλλά κακή απορρόφηση, πιο καθαρτικό", "Threonate: ερευνάται για γνωστικές/εγκεφαλικές εφαρμογές"], dosage: "200–400 mg στοιχειακού μαγνησίου (ανάλογα με τη μορφή)", timing: "Βράδυ, 30–60' πριν τον ύπνο", cautions: "Έλεγξε την περιεκτικότητα σε 'στοιχειακό μαγνήσιο' στην ετικέτα — το συνολικό βάρος της ένωσης υπερεκτιμά την πραγματική δόση.", research: [{ headline: "Η απορρόφηση και η χρήση διαφέρουν σημαντικά ανά μορφή", takeaway: "Συγκριτική έρευνα δείχνει ότι το γλυκινικό/κιτρικό μαγνήσιο απορροφώνται καλύτερα και είναι πιο ήπια στο έντερο από το οξείδιο (κακή απορρόφηση αλλά φθηνό), ενώ το threonate μελετάται ειδικά για διέλευση στον εγκέφαλο.", tag: "Συγκριτική Έρευνα Βιοδιαθεσιμότητας" }] }, es: { name: "Formas de Magnesio (Glicinato, Citrato, Óxido, Treonato)", tagline: "No todo el magnesio es igual — la forma cambia la absorción y el efecto." }, no: { name: "Magnesiumformer (Glysinat, Sitrat, Oksid, Treonat)", tagline: "Ikke alt magnesium er likt — formen endrer opptak og effekt." } } },
+  { id: "zinc", category: "health", tags: [], timingSlot: "evening", evidence: "Moderate", research: [{ headline: "Meta-analysis confirms it shortens the common cold", takeaway: "A Cochrane meta-analysis of zinc lozenges found they reduced the average duration of a common cold by about 33% when started within 24 hours of symptom onset, one of the more consistently replicated supplement effects in cold research.", tag: "Cochrane Meta-Analysis" }], goals: ["immune", "testosterone support", "recovery"], mechanism: "An essential trace mineral involved in immune function, protein synthesis, and hundreds of enzymatic reactions; deficiency is linked to lower testosterone and impaired recovery.", benefits: ["Shortens cold duration when taken early", "Important for immune function and recovery", "Deficiency linked to lower testosterone"], dosage: "15–30 mg daily (picolinate/citrate/glycinate forms absorb best)", timing: "Evening, away from calcium/iron supplements", cautions: "Excess long-term zinc can interfere with copper absorption — don't exceed the upper limit without monitoring.", i18n: { en: { name: "Zinc", tagline: "An essential mineral for immune function, with proven benefit for shortening colds." }, el: { name: "Ψευδάργυρος", tagline: "Απαραίτητο ορυκτό για ανοσολογική λειτουργία, με αποδεδειγμένο όφελος στη μείωση κρυολογήματος.", goals: ["ανοσοποιητικό", "στήριξη τεστοστερόνης", "ανάρρωση"], mechanism: "Απαραίτητο ιχνοστοιχείο που εμπλέκεται στην ανοσολογική λειτουργία, την πρωτεϊνοσύνθεση και εκατοντάδες ενζυμικές αντιδράσεις· η ανεπάρκεια συνδέεται με χαμηλότερη τεστοστερόνη.", benefits: ["Μειώνει τη διάρκεια κρυολογήματος όταν λαμβάνεται νωρίς", "Σημαντικό για ανοσολογική λειτουργία και ανάρρωση", "Η ανεπάρκεια συνδέεται με χαμηλότερη τεστοστερόνη"], dosage: "15–30 mg ημερησίως (picolinate/citrate/glycinate απορροφώνται καλύτερα)", timing: "Βράδυ, μακριά από ασβέστιο/σίδηρο", cautions: "Υπερβολικό μακροχρόνιο ψευδάργυρο μπορεί να επηρεάσει την απορρόφηση χαλκού — μην υπερβαίνεις το ανώτατο όριο χωρίς παρακολούθηση.", research: [{ headline: "Μετα-ανάλυση επιβεβαιώνει ότι μειώνει τη διάρκεια κρυολογήματος", takeaway: "Μια μετα-ανάλυση Cochrane σε παστίλιες ψευδαργύρου βρήκε μείωση της μέσης διάρκειας κρυολογήματος κατά περίπου 33% όταν ξεκινούσε εντός 24 ωρών από τα πρώτα συμπτώματα.", tag: "Μετα-ανάλυση Cochrane" }] }, es: { name: "Zinc", tagline: "Un mineral esencial para la función inmunitaria, con beneficio probado para acortar resfriados." }, no: { name: "Sink", tagline: "Et essensielt mineral for immunfunksjon, med bevist effekt for å forkorte forkjølelser." } } },
 ];
 
 const SYNERGIES = [
@@ -416,6 +575,32 @@ const CAUTION_RULES = {
   },
 };
 
+// Self-contained data for the "Compare" tab (commercial product comparison).
+// Deliberately separate from INGREDIENTS — this tab compares real branded
+// products, not generic ingredient types, and should stay independent of
+// the Library/Stack Builder data model so it can be extended on its own.
+// Self-contained data for the "Compare" tab (commercial product comparison).
+// Deliberately separate from INGREDIENTS — this tab compares real branded
+// products, not generic ingredient types, and should stay independent of
+// the Library/Stack Builder data model so it can be extended on its own.
+// Each product carries a "specs" list (ordered, category-specific rows) so
+// the comparison table can render whatever attributes make sense for that
+// category (protein macros vs. a single dose amount for creatine, etc).
+const PRODUCT_CATEGORIES = {
+  en: { protein: "Whey Protein", creatine: "Creatine", omega3: "Omega-3 / Fish Oil", vitaminD: "Vitamin D3", magnesium: "Magnesium", ashwagandha: "Ashwagandha", melatonin: "Melatonin", collagen: "Collagen", multivitamin: "Multivitamin" },
+  el: { protein: "Πρωτεΐνη Ορού Γάλακτος (Whey)", creatine: "Κρεατίνη", omega3: "Ωμέγα-3 / Ιχθυέλαιο", vitaminD: "Βιταμίνη D3", magnesium: "Μαγνήσιο", ashwagandha: "Ashwagandha", melatonin: "Μελατονίνη", collagen: "Κολλαγόνο", multivitamin: "Πολυβιταμίνη" },
+  es: { protein: "Proteína de Suero", creatine: "Creatina", omega3: "Omega-3 / Aceite de Pescado", vitaminD: "Vitamina D3", magnesium: "Magnesio", ashwagandha: "Ashwagandha", melatonin: "Melatonina", collagen: "Colágeno", multivitamin: "Multivitamínico" },
+  no: { protein: "Myseprotein", creatine: "Kreatin", omega3: "Omega-3 / Fiskeolje", vitaminD: "Vitamin D3", magnesium: "Magnesium", ashwagandha: "Ashwagandha", melatonin: "Melatonin", collagen: "Kollagen", multivitamin: "Multivitamin" },
+};
+
+// Products are CMS-managed content (like News) so Andrew can add/edit them
+// via /admin without touching code, including uploading a product photo.
+const productModules = import.meta.glob("/content/products/*.json", { eager: true });
+const PRODUCTS = Object.entries(productModules)
+  .map(([path, mod]) => ({ id: path.split("/").pop().replace(".json", ""), ...(mod.default || mod) }))
+  .sort((a, b) => a.brand.localeCompare(b.brand));
+
+
 function RatingBadge({ rating, evidence, size = "sm", ovrLabel }) {
   const cls = evidence === "High" ? "nk-rate-hi" : evidence === "Moderate" ? "nk-rate-mid" : "nk-rate-lo";
   return (
@@ -446,7 +631,7 @@ export default function SupplementLibrary() {
   const navigate = useNavigate();
   const [lang, setLang] = useState("en");
   const [theme, setTheme] = useState("dark");
-  const [view, setView] = useState("library");
+  const [view, setView] = useState("welcome");
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState(null);
   const initialSelected = routeId ? INGREDIENTS.find((i) => i.id === routeId) || null : null;
@@ -464,6 +649,10 @@ export default function SupplementLibrary() {
   };
   const [showLegal, setShowLegal] = useState(false);
   const [stackSelection, setStackSelection] = useState([]);
+  const [compareCategory, setCompareCategory] = useState("protein");
+  const [compareSelection, setCompareSelection] = useState(
+    PRODUCTS.filter((p) => p.category === "protein").map((p) => p.id)
+  );
   const [showFilters, setShowFilters] = useState(false);
   const barRef = useRef(null);
   const [barHeight, setBarHeight] = useState(0);
@@ -567,7 +756,7 @@ export default function SupplementLibrary() {
     doc.setFont(undefined, "normal");
     doc.setFontSize(10);
     doc.setTextColor(120);
-    doc.text("Know Your Stack — stck.info", marginLeft, y);
+    doc.text("STCK — stck.info", marginLeft, y);
     doc.setTextColor(0);
     y += 12;
 
@@ -737,6 +926,9 @@ export default function SupplementLibrary() {
         .nk-card-title { font-size:1.9rem; line-height:0.95; font-weight:400; margin:0 0 4px; color:var(--text); }
         .nk-card:hover .nk-card-title { color:var(--accent-red); }
         .nk-card-titleEn { font-size:10px; color:var(--text-dim); margin-bottom:10px; }
+        .nk-cta-btn { display:inline-flex; align-items:center; background:var(--accent-red); color:#fff; border:none; border-radius:999px; padding:14px 28px; font-size:14px; font-weight:700; letter-spacing:0.03em; cursor:pointer; transition:opacity 0.15s ease; }
+        .nk-cta-btn:hover { opacity:0.88; }
+        .nk-welcome-card { text-align:left; }
         .nk-card-tagline { font-size:13.5px; color:var(--text-muted); line-height:1.5; }
 
         .nk-rate-badge { display:flex; flex-direction:column; align-items:center; justify-content:center; width:44px; height:44px; border-radius:10px; border:2px solid; background:var(--bg); flex-shrink:0; }
@@ -830,6 +1022,13 @@ export default function SupplementLibrary() {
         .nk-stack-results { display:flex; flex-direction:column; gap:32px; }
         .nk-stack-section h4 { font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text); margin:0 0 14px; font-family:'Barlow Condensed',sans-serif; }
         .nk-stack-note { font-size:13px; color:var(--text-dim); line-height:1.6; font-style:italic; }
+        .nk-compare-table { width:100%; border-collapse:collapse; font-size:14px; }
+        .nk-compare-table th, .nk-compare-table td { padding:14px 16px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top; white-space:normal; min-width:180px; }
+        .nk-compare-table thead th { border-bottom:2px solid var(--text); }
+        .nk-compare-photo { width:64px; height:64px; object-fit:contain; border-radius:8px; background:var(--surface-2, #111); margin-bottom:8px; }
+        .nk-compare-row-label { font-weight:600; color:var(--text-dim); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; min-width:140px; white-space:nowrap; }
+        .nk-compare-source-link { color:var(--accent-red); text-decoration:none; font-size:13px; font-weight:600; }
+        .nk-compare-source-link:hover { text-decoration:underline; }
         .nk-stack-list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
         .nk-stack-list li { font-size:14px; line-height:1.6; padding:12px 16px; border-radius:12px; border-left:3px solid; }
         .nk-stack-list-good li { background:var(--good-bg); border-left-color:var(--good-border); color:var(--good-text); }
@@ -887,6 +1086,9 @@ export default function SupplementLibrary() {
         <div className="nk-bar-inner">
           <div className="nk-tabs-row">
             <div className="nk-tab-group">
+              <button onClick={() => setView("welcome")} className={`nk-tab-btn ${view === "welcome" ? "is-active" : ""}`}>
+                {t.tabWelcome}
+              </button>
               <button onClick={() => setView("library")} className={`nk-tab-btn ${view === "library" ? "is-active" : ""}`}>
                 {t.tabLibrary}
               </button>
@@ -895,6 +1097,9 @@ export default function SupplementLibrary() {
               </button>
               <button onClick={() => setView("stack")} className={`nk-tab-btn ${view === "stack" ? "is-active" : ""}`}>
                 {t.tabStack}
+              </button>
+              <button onClick={() => setView("compare")} className={`nk-tab-btn ${view === "compare" ? "is-active" : ""}`}>
+                {t.tabCompare}
               </button>
               <button onClick={() => setView("premium")} className={`nk-tab-btn nk-tab-premium ${view === "premium" ? "is-active" : ""}`}>
                 <Crown size={12} style={{ marginRight: 4, display: "inline", verticalAlign: "-2px" }} />
@@ -982,7 +1187,44 @@ export default function SupplementLibrary() {
 
       <div style={{ height: barHeight }} />
 
-      {view === "library" ? (
+      {view === "welcome" ? (
+        <>
+          <header className="nk-hero">
+            <div className="nk-hero-inner">
+              <h1 className="nk-display nk-hero-title">
+                {t.welcomeHeroTitle}<br /><span className="nk-red-text">STCK</span>
+              </h1>
+              <p className="nk-hero-sub">{t.welcomeIntro}</p>
+            </div>
+          </header>
+
+          <main className="nk-main">
+            <div className="nk-grid">
+              {[
+                { icon: Search, view: "library", title: t.tabLibrary, desc: t.welcomeGuideLibraryDesc },
+                { icon: Beaker, view: "research", title: t.tabResearch, desc: t.welcomeGuideResearchDesc },
+                { icon: SlidersHorizontal, view: "stack", title: t.tabStack, desc: t.welcomeGuideStackDesc },
+                { icon: Layers, view: "compare", title: t.tabCompare, desc: t.welcomeGuideCompareDesc },
+                { icon: Newspaper, view: "news", title: t.tabNews, desc: t.welcomeGuideNewsDesc },
+                { icon: Crown, view: "premium", title: t.tabPremium, desc: t.welcomeGuidePremiumDesc },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <button key={item.view} onClick={() => setView(item.view)} className="nk-card nk-welcome-card">
+                    <Icon size={22} className="nk-red-text" style={{ marginBottom: 10 }} />
+                    <div className="nk-card-title">{item.title}</div>
+                    <p className="nk-card-tagline">{item.desc}</p>
+                  </button>
+                );
+              })}
+            </div>
+
+            <button onClick={() => setView("library")} className="nk-cta-btn" style={{ marginTop: 32 }}>
+              {t.welcomeCta} <ArrowRight size={16} style={{ marginLeft: 6, display: "inline", verticalAlign: "-3px" }} />
+            </button>
+          </main>
+        </>
+      ) : view === "library" ? (
         <>
           {/* Hero */}
           <header className="nk-hero">
@@ -1172,6 +1414,115 @@ export default function SupplementLibrary() {
                   </div>
                 </div>
               </div>
+            )}
+          </main>
+        </>
+      ) : view === "compare" ? (
+        <>
+          {/* Product Compare — self-contained, real branded products */}
+          <header className="nk-hero">
+            <div className="nk-hero-inner">
+              <h1 className="nk-display nk-hero-title">
+                {t.heroTitle1}<br /><span className="nk-red-text">{t.tabCompare}</span>
+              </h1>
+              <p className="nk-hero-sub">{t.compareIntro}</p>
+            </div>
+          </header>
+
+          <main className="nk-main">
+            <div className="nk-chip-row" style={{ marginBottom: 16 }}>
+              <span className="nk-chip-label nk-eyebrow">{t.compareCategoryLabel}</span>
+              {Object.keys(PRODUCT_CATEGORIES.en).map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    setCompareCategory(cat);
+                    setCompareSelection(PRODUCTS.filter((p) => p.category === cat).map((p) => p.id));
+                  }}
+                  className={`nk-chip ${compareCategory === cat ? "is-active" : ""}`}
+                >
+                  {PRODUCT_CATEGORIES[lang][cat]}
+                </button>
+              ))}
+            </div>
+
+            <div className="nk-stack-picker" style={{ marginBottom: 24 }}>
+              {PRODUCTS.filter((p) => p.category === compareCategory).map((p) => {
+                const active = compareSelection.includes(p.id);
+                return (
+                  <button
+                    key={p.id}
+                    onClick={() =>
+                      setCompareSelection((sel) =>
+                        active ? sel.filter((id) => id !== p.id) : [...sel, p.id]
+                      )
+                    }
+                    className={`nk-stack-chip ${active ? "is-active" : ""}`}
+                  >
+                    {p.brand} — {p.name}
+                  </button>
+                );
+              })}
+            </div>
+
+            {compareSelection.length === 0 ? (
+              <div className="nk-empty">
+                <p className="nk-eyebrow">{t.compareEmptySub}</p>
+              </div>
+            ) : (
+              <>
+                <div style={{ overflowX: "auto" }}>
+                  <table className="nk-compare-table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        {PRODUCTS.filter((p) => compareSelection.includes(p.id)).map((p) => (
+                          <th key={p.id}>
+                            {p.image ? (
+                              <img src={p.image} alt={`${p.brand} ${p.name}`} className="nk-compare-photo" />
+                            ) : null}
+                            <div className="nk-eyebrow">{p.brand}</div>
+                            <div className="nk-display">{p.name}</div>
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(PRODUCTS.find((p) => compareSelection.includes(p.id))?.specs || []).map((spec, i) => (
+                        <tr key={spec.label}>
+                          <td className="nk-compare-row-label">{spec.label}</td>
+                          {PRODUCTS.filter((p) => compareSelection.includes(p.id)).map((p) => (
+                            <td key={p.id}>{p.specs[i] ? p.specs[i].value : "—"}</td>
+                          ))}
+                        </tr>
+                      ))}
+                      <tr>
+                        <td className="nk-compare-row-label">{t.compareColCert}</td>
+                        {PRODUCTS.filter((p) => compareSelection.includes(p.id)).map((p) => (
+                          <td key={p.id}>{p.certifications}</td>
+                        ))}
+                      </tr>
+                      <tr>
+                        <td className="nk-compare-row-label">{t.compareColPrice}</td>
+                        {PRODUCTS.filter((p) => compareSelection.includes(p.id)).map((p) => (
+                          <td key={p.id}>{p.pricePerServing}</td>
+                        ))}
+                      </tr>
+                      <tr>
+                        <td className="nk-compare-row-label">{t.compareSourceLink}</td>
+                        {PRODUCTS.filter((p) => compareSelection.includes(p.id)).map((p) => (
+                          <td key={p.id}>
+                            <a href={p.sourceUrl} target="_blank" rel="noopener noreferrer" className="nk-compare-source-link">
+                              {t.compareSourceLink} ↗
+                            </a>
+                          </td>
+                        ))}
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="nk-stack-note" style={{ marginTop: 16 }}>{t.compareDataNote}</p>
+              </>
             )}
           </main>
         </>

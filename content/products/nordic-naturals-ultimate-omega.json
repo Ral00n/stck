@@ -1,0 +1,17 @@
+{
+  "brand": "Nordic Naturals",
+  "name": "Ultimate Omega",
+  "category": "omega3",
+  "image": "",
+  "specs": [
+    { "label": "Serving Size", "value": "2 soft gels" },
+    { "label": "Total Omega-3s", "value": "1,280 mg" },
+    { "label": "EPA", "value": "650 mg" },
+    { "label": "DHA", "value": "450 mg" },
+    { "label": "Calories", "value": "20" },
+    { "label": "Source", "value": "Wild-caught sardines & anchovies (fish oil)" }
+  ],
+  "certifications": "Non-GMO Project Verified; Friend of the Sea sustainable sourcing",
+  "pricePerServing": "≈$0.85",
+  "sourceUrl": "https://www.nordic.com/products/ultimate-omega/"
+}
