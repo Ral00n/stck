@@ -1111,9 +1111,12 @@ export default function SupplementLibrary() {
                   {t.tabStore}
                 </button>
               )}
-              <button onClick={() => setView("news")} className={`nk-tab-btn ${view === "news" ? "is-active" : ""}`}>
-                {t.tabNews}
-              </button>
+              {/* News tab hidden for now — re-enable by removing the {false && ...} wrapper */}
+              {false && (
+                <button onClick={() => setView("news")} className={`nk-tab-btn ${view === "news" ? "is-active" : ""}`}>
+                  {t.tabNews}
+                </button>
+              )}
             </div>
             <button
               onClick={() => setTheme((th) => (th === "dark" ? "light" : "dark"))}
@@ -1208,7 +1211,6 @@ export default function SupplementLibrary() {
                 { icon: Beaker, view: "research", title: t.tabResearch, desc: t.welcomeGuideResearchDesc },
                 { icon: SlidersHorizontal, view: "stack", title: t.tabStack, desc: t.welcomeGuideStackDesc },
                 { icon: Layers, view: "compare", title: t.tabCompare, desc: t.welcomeGuideCompareDesc },
-                { icon: Newspaper, view: "news", title: t.tabNews, desc: t.welcomeGuideNewsDesc },
                 { icon: Crown, view: "premium", title: t.tabPremium, desc: t.welcomeGuidePremiumDesc },
               ].map((item) => {
                 const Icon = item.icon;
