@@ -587,10 +587,10 @@ const CAUTION_RULES = {
 // the comparison table can render whatever attributes make sense for that
 // category (protein macros vs. a single dose amount for creatine, etc).
 const PRODUCT_CATEGORIES = {
-  en: { protein: "Whey Protein", creatine: "Creatine", omega3: "Omega-3 / Fish Oil", vitaminD: "Vitamin D3", magnesium: "Magnesium", ashwagandha: "Ashwagandha", melatonin: "Melatonin", collagen: "Collagen", multivitamin: "Multivitamin" },
-  el: { protein: "Πρωτεΐνη Ορού Γάλακτος (Whey)", creatine: "Κρεατίνη", omega3: "Ωμέγα-3 / Ιχθυέλαιο", vitaminD: "Βιταμίνη D3", magnesium: "Μαγνήσιο", ashwagandha: "Ashwagandha", melatonin: "Μελατονίνη", collagen: "Κολλαγόνο", multivitamin: "Πολυβιταμίνη" },
-  es: { protein: "Proteína de Suero", creatine: "Creatina", omega3: "Omega-3 / Aceite de Pescado", vitaminD: "Vitamina D3", magnesium: "Magnesio", ashwagandha: "Ashwagandha", melatonin: "Melatonina", collagen: "Colágeno", multivitamin: "Multivitamínico" },
-  no: { protein: "Myseprotein", creatine: "Kreatin", omega3: "Omega-3 / Fiskeolje", vitaminD: "Vitamin D3", magnesium: "Magnesium", ashwagandha: "Ashwagandha", melatonin: "Melatonin", collagen: "Kollagen", multivitamin: "Multivitamin" },
+  en: { protein: "Whey Protein", creatine: "Creatine", omega3: "Omega-3 / Fish Oil", vitaminD: "Vitamin D3", magnesium: "Magnesium", ashwagandha: "Ashwagandha", melatonin: "Melatonin", collagen: "Collagen", multivitamin: "Multivitamin", preworkout: "Pre-Workout", bcaa: "BCAA", massGainer: "Mass Gainer", electrolytes: "Electrolytes", probiotics: "Probiotics", greens: "Greens Powder", veganProtein: "Vegan Protein", testBooster: "Testosterone Support", betaAlanine: "Beta-Alanine", glutamine: "Glutamine", proteinBars: "Protein Bars", jointSupport: "Joint Support", caffeine: "Caffeine", carnitine: "L-Carnitine", coq10: "CoQ10", curcumin: "Turmeric/Curcumin", iron: "Iron", vitaminB12: "Vitamin B12" },
+  el: { protein: "Πρωτεΐνη Ορού Γάλακτος (Whey)", creatine: "Κρεατίνη", omega3: "Ωμέγα-3 / Ιχθυέλαιο", vitaminD: "Βιταμίνη D3", magnesium: "Μαγνήσιο", ashwagandha: "Ashwagandha", melatonin: "Μελατονίνη", collagen: "Κολλαγόνο", multivitamin: "Πολυβιταμίνη", preworkout: "Pre-Workout", bcaa: "BCAA", massGainer: "Mass Gainer", electrolytes: "Ηλεκτρολύτες", probiotics: "Προβιοτικά", greens: "Σκόνη Πράσινων", veganProtein: "Vegan Πρωτεΐνη", testBooster: "Στήριξη Τεστοστερόνης", betaAlanine: "Beta-Alanine", glutamine: "Γλουταμίνη", proteinBars: "Μπάρες Πρωτεΐνης", jointSupport: "Στήριξη Αρθρώσεων", caffeine: "Καφεΐνη", carnitine: "L-Καρνιτίνη", coq10: "CoQ10", curcumin: "Κουρκουμάς/Curcumin", iron: "Σίδηρος", vitaminB12: "Βιταμίνη B12" },
+  es: { protein: "Proteína de Suero", creatine: "Creatina", omega3: "Omega-3 / Aceite de Pescado", vitaminD: "Vitamina D3", magnesium: "Magnesio", ashwagandha: "Ashwagandha", melatonin: "Melatonina", collagen: "Colágeno", multivitamin: "Multivitamínico", preworkout: "Pre-Entreno", bcaa: "BCAA", massGainer: "Ganador de Masa", electrolytes: "Electrolitos", probiotics: "Probióticos", greens: "Polvo Verde", veganProtein: "Proteína Vegana", testBooster: "Apoyo a la Testosterona", betaAlanine: "Beta-Alanina", glutamine: "Glutamina", proteinBars: "Barras de Proteína", jointSupport: "Apoyo Articular", caffeine: "Cafeína", carnitine: "L-Carnitina", coq10: "CoQ10", curcumin: "Cúrcuma/Curcumina", iron: "Hierro", vitaminB12: "Vitamina B12" },
+  no: { protein: "Myseprotein", creatine: "Kreatin", omega3: "Omega-3 / Fiskeolje", vitaminD: "Vitamin D3", magnesium: "Magnesium", ashwagandha: "Ashwagandha", melatonin: "Melatonin", collagen: "Kollagen", multivitamin: "Multivitamin", preworkout: "Pre-Workout", bcaa: "BCAA", massGainer: "Massegainer", electrolytes: "Elektrolytter", probiotics: "Probiotika", greens: "Grønt Pulver", veganProtein: "Vegansk Protein", testBooster: "Testosteronstøtte", betaAlanine: "Beta-Alanin", glutamine: "Glutamin", proteinBars: "Proteinbarer", jointSupport: "Leddstøtte", caffeine: "Koffein", carnitine: "L-Karnitin", coq10: "CoQ10", curcumin: "Gurkemeie/Curcumin", iron: "Jern", vitaminB12: "Vitamin B12" },
 };
 
 // Products are CMS-managed content (like News) so Andrew can add/edit them
@@ -1105,9 +1105,12 @@ export default function SupplementLibrary() {
                 <Crown size={12} style={{ marginRight: 4, display: "inline", verticalAlign: "-2px" }} />
                 {t.tabPremium}
               </button>
-              <button onClick={() => setView("store")} className={`nk-tab-btn ${view === "store" ? "is-active" : ""}`}>
-                {t.tabStore}
-              </button>
+              {/* Store tab hidden for now — re-enable by uncommenting when ready to launch */}
+              {false && (
+                <button onClick={() => setView("store")} className={`nk-tab-btn ${view === "store" ? "is-active" : ""}`}>
+                  {t.tabStore}
+                </button>
+              )}
               <button onClick={() => setView("news")} className={`nk-tab-btn ${view === "news" ? "is-active" : ""}`}>
                 {t.tabNews}
               </button>
@@ -1537,23 +1540,6 @@ export default function SupplementLibrary() {
                 className="nk-premium-photo"
                 onError={(e) => { e.currentTarget.style.display = "none"; }}
               />
-              <div className="nk-premium-eyebrow nk-mono">
-                <Crown size={14} strokeWidth={2} />
-                <span>{t.premiumEyebrow}</span>
-              </div>
-              <h1 className="nk-display nk-premium-title">
-                {t.premiumTitle1}<br /><span className="nk-red-text">{t.premiumAccent}</span>
-              </h1>
-              <p className="nk-premium-sub">{t.premiumSub}</p>
-
-              <ul className="nk-premium-bullets">
-                {t.premiumBullets.map((b, i) => (
-                  <li key={i}>
-                    <Check size={16} />
-                    {b}
-                  </li>
-                ))}
-              </ul>
 
               <div className="nk-premium-buy-row">
                 <span className="nk-premium-price">{t.premiumPrice}</span>

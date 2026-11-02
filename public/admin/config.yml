@@ -68,6 +68,24 @@ collections:
           - { label: "Melatonin", value: "melatonin" }
           - { label: "Collagen", value: "collagen" }
           - { label: "Multivitamin", value: "multivitamin" }
+          - { label: "Pre-Workout", value: "preworkout" }
+          - { label: "BCAA", value: "bcaa" }
+          - { label: "Mass Gainer", value: "massGainer" }
+          - { label: "Electrolytes", value: "electrolytes" }
+          - { label: "Probiotics", value: "probiotics" }
+          - { label: "Greens Powder", value: "greens" }
+          - { label: "Vegan Protein", value: "veganProtein" }
+          - { label: "Testosterone Support", value: "testBooster" }
+          - { label: "Beta-Alanine", value: "betaAlanine" }
+          - { label: "Glutamine", value: "glutamine" }
+          - { label: "Protein Bars", value: "proteinBars" }
+          - { label: "Joint Support", value: "jointSupport" }
+          - { label: "Caffeine", value: "caffeine" }
+          - { label: "L-Carnitine", value: "carnitine" }
+          - { label: "CoQ10", value: "coq10" }
+          - { label: "Turmeric/Curcumin", value: "curcumin" }
+          - { label: "Iron", value: "iron" }
+          - { label: "Vitamin B12", value: "vitaminB12" }
       - { label: "Product Photo", name: "image", widget: "image", required: false }
       - label: "Specs (rows shown in the comparison table)"
         name: "specs"
